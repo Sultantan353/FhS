@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2023-04-06T02:53:00.873Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="LkYn-IolMZWgopSF6O44" version="21.1.2" type="device">
+  <diagram name="Page-1" id="wz7ZZ5HQn1qG8qt7Podb">
+    <mxGraphModel dx="1468" dy="940" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="key2nygwHP1EWXI1LVwu-1" value="" style="ellipse;html=1;shape=startState;fillColor=#FF0000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="50" y="10" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-2" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#000000;rounded=0;" edge="1" source="key2nygwHP1EWXI1LVwu-1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="65" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#ffff88;strokeColor=#000000;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-3" target="key2nygwHP1EWXI1LVwu-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="140" y="130" />
+              <mxPoint x="140" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-3" value="تسجيل الدخول" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="5" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-4" target="key2nygwHP1EWXI1LVwu-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-4" value="نظام سجلات العملاء" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="5" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#000000;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-5" target="key2nygwHP1EWXI1LVwu-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-5" value="تسجيل بيانات السيارة" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="160" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-6" target="key2nygwHP1EWXI1LVwu-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-6" value="نظام سجلات السيارات" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="160" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-29" style="edgeStyle=orthogonalEdgeStyle;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d5e8d4;strokeColor=#000000;rounded=0;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-7" target="key2nygwHP1EWXI1LVwu-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-7" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;طلب خدمة الفحص الدوري&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="320" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-8" target="key2nygwHP1EWXI1LVwu-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-8" value="نظام الطلبات" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="320" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d5e8d4;strokeColor=#000000;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-9" target="key2nygwHP1EWXI1LVwu-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-9" value="البحث عن السائقين المتاحين" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="480" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-10" target="key2nygwHP1EWXI1LVwu-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-10" value="نظام سجلات السائقين" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="480" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d5e8d4;strokeColor=#000000;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-11" target="key2nygwHP1EWXI1LVwu-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-11" value="عرض معلومات الطلب" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="640" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-12" target="key2nygwHP1EWXI1LVwu-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-12" value="نظام الطلبات" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="640" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d5e8d4;strokeColor=#000000;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-13" target="key2nygwHP1EWXI1LVwu-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-13" value="تأكيد الطلب" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="800" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d5e8d4;strokeColor=#000000;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-14" target="key2nygwHP1EWXI1LVwu-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-14" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;إرسال الطلب إلى السائق&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="960" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-15" target="key2nygwHP1EWXI1LVwu-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-15" value="نظام سجلات السائقين" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="800" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#d5e8d4;strokeColor=#000000;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-16" target="key2nygwHP1EWXI1LVwu-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-16" value="وصول السائق وإستلام السيارة" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-17" target="key2nygwHP1EWXI1LVwu-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-17" value="نظام الطلبات" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-18" target="key2nygwHP1EWXI1LVwu-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-18" value="عمل إختبار الفحص الدوري للسيارة" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-19" target="key2nygwHP1EWXI1LVwu-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-19">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1740" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-19" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1430" y="90" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-20" target="key2nygwHP1EWXI1LVwu-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-20" value="عمل الصيانة اللازمة للسيارة" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="1410" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1740" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-21" value="إعادة إختبار الفحص الدوري" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="1570" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-22" target="key2nygwHP1EWXI1LVwu-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-22" value="نظام تقارير صيانة السيارات" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="1410" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-23" value="" style="shape=link;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="100" relative="1" as="geometry">
+            <mxPoint x="1738" y="80" as="sourcePoint" />
+            <mxPoint x="1738" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-24" value="تسليم السيارة للعميل" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="1774" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-25" target="key2nygwHP1EWXI1LVwu-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-25" value="نظام الطلبات" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="1774" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-26" value="" style="ellipse;html=1;shape=endState;fillColor=#FF0000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="1940" y="155" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-51" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="key2nygwHP1EWXI1LVwu-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1740" y="170" as="sourcePoint" />
+            <mxPoint x="1730" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-52" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="key2nygwHP1EWXI1LVwu-24" target="key2nygwHP1EWXI1LVwu-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1800" y="230" as="sourcePoint" />
+            <mxPoint x="1850" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="key2nygwHP1EWXI1LVwu-53" value="المخطط العام لمشروع الفحص الدوري" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=41;" vertex="1" parent="1">
+          <mxGeometry x="640" y="20" width="750" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
