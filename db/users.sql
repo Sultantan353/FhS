@@ -1,0 +1,13 @@
+CREATE TABLE users IF NOT EXISTS (
+    user_id INT NOT NULL,
+    user_name VARCHAR(255) NOT NULL,
+    user_email VARCHAR(255) NOT NULL,
+    user_password CHAR(32) NOT NULL,
+    user_role VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (user_id)
+);
+
+
+
