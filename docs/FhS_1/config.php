@@ -20,6 +20,6 @@
       );";
     $retval = mysqli_query( $conn,$sql );
     if(! $retval ) echo('Could not create table: ');
-    else  echo "Table created successfully\n";
+    else  echo "";
     
 ?>
