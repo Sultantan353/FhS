@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+   include('session.php');
+   $user = $_SESSION['login_user'];
+?>
 <html lang="en">
 
 <head>
@@ -44,7 +48,7 @@
 												<h5 class="panel-title">طلب جديد</h5>
 											</div>
 											<div class="panel-body">
-												<form>
+												<form action="" method="post">
 
 
 
@@ -53,10 +57,10 @@
 															إختر الخدمة 
 														</label>
 														<select required="required" class="form-control"
-															onChange="getdoctor(this.value);" required="required">
+															onChange="getdoctor(this.value);" required="required" name="servic">
 															<option value="">قائمة الخدمات</option>
-															<option value="">خدمة الفحص الدوري</option>
-															<option value="">خدمة الفحص الدوري والصيانة</option>
+															<option value="Periodic inspection service">Periodic inspection service</option>
+															<option value="Periodic inspection and maintenance service">Periodic inspection and maintenance service</option>
 														</select>
 													</div>
 
@@ -67,7 +71,7 @@
 														<label for="doctor">
 															نوع السيارة
 														</label>
-														<input class="form-control" required="required" type="text" placeholder="إسم المركبة والموديل">
+														<input class="form-control" name="car" required="required" type="text" placeholder="إسم المركبة والموديل">
 													</div>
 
 
@@ -78,43 +82,16 @@
 														<label for="consultancyfees">
 															رقم هيكل السيارة
 														</label>
-														<input type="text" class="form-control" required="required" placeholder="الرقم التسلسلي">
+														<input type="text" name="numcar" class="form-control" required="required" placeholder="الرقم التسلسلي">
 
 														
 													</div>
-													<div class="form-group">
-														<label>
-															هل السيارة تحت التامين 
-														</label>
-														<select required="required" class="form-control">
-														<option value="">إختر من القائمة</option>
-														<option value="">نعم</option>
-														<option value="">لا</option>
-													</select>	
-													</div>
-													<div class="form-group">
-														<label for="AppointmentDate">
-															التاريخ
-														</label>
-														<input class="form-control datepicker" name="appdate"
-															required="required" data-date-format="yyyy-mm-dd">
-
-													</div>
-
+													
 													<div class="form-group">
 														<label >
-
-															الوقت
-
+															المدينة 
 														</label>
-														<input class="form-control" required="required" id="timepicker1"
-															required="required">
-													</div>
-													<div class="form-group">
-														<label >
-															المدينة والحي
-														</label>
-														<input type="text" required="required" class="form-control">
+														<input type="text" name="city" required="required" class="form-control">
 
 														
 													</div>
@@ -122,21 +99,43 @@
 														<label >
 															الرقم الخاص بالتواصل
 														</label>
-														<input type="text" required="required" class="form-control">
+														<input type="text" name="phone" required="required" class="form-control">
 
 														
 													</div>
-														<h3>
-															هل أنت موافق على شروط وأحكام الخدمة؟
-														</h3>
-														<input type="checkbox" required="required" class="form-control">
+														
 
 														
 												
-													<button type="submit" name="submit" class="btn btn-o btn-primary">
-														أرسل الطلب
-													</button>
+													<input type="submit" name="a" class="btn btn-o btn-primary">
 												</form>
+												<?php
+
+if(isset($_POST['a']))
+    {
+        $servic = $_POST['servic'];
+        $car = $_POST['car'];
+        $numcar = $_POST['numcar'];
+        $city = $_POST['city'];
+        $phone = $_POST['phone'];
+        
+        $req = "INSERT INTO orders(servic,car,numcar,city,phone)
+		VALUES('$servic','$car','$numcar','$city','$phone')";
+$query = mysqli_query($conn,$req);
+            $sql = "INSERT INTO orders(username,servic,car,numcar,city,phone)
+            VALUES('$user','$servic','$car','$numcar','$city','$phone')";
+            $result = mysqli_query($conn, $sql);
+            if ($result == TRUE) 
+            {
+                echo "تم انشاء الطلب<br/>";
+            }
+            else 
+                echo "خطأ<br/>";
+        }
+    
+    mysqli_close($conn);
+?>
+
 											</div>
 										</div>
 									</div>

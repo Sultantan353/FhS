@@ -73,28 +73,28 @@ h1{
 </div>
 </body></html>
 <?php
-    include("config.php");
+    include("driverconfig.php");
     if(isset($_POST['register']))
     {
         $username = $_POST['username'];
         $city = $_POST['city'];
         $age = $_POST['age'];
-        $email = $_POST['email'];
         $password = $_POST['password'];
+        $email = $_POST['email'];
         
-        $sqlcheck = "SELECT username FROM login WHERE username = '$username'";
+        $sqlcheck = "SELECT username FROM driver WHERE username = '$username'";
         $resultcheck = mysqli_query($conn, $sqlcheck); 
         if (mysqli_num_rows($resultcheck) > 0)
             echo ("user name already taken");
         else
         {
-            $sql = "INSERT INTO login(username,city,age,password1,email)
-            VALUES('$username','$city','$age','$password','$email')";
+            $sql = "INSERT INTO driver(username,age,city,password1,email)
+            VALUES('$username','$age','$city','$password','$email')";
             $result = mysqli_query($conn, $sql);
             if ($result == TRUE) 
             {
-                //echo "Save Ok<br/>";
-                header("location: login.php");
+                echo "تم اضافة سائق<br/>";
+                //header("location: driverlogin.php");
             }
             else 
                 echo "Save failed<br/>";

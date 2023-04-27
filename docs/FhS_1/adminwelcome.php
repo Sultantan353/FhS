@@ -1,5 +1,5 @@
 <?php
-   include('session.php');
+   include('adminsession.php');
    $user = $_SESSION['login_user'];
 ?>
 <html>
@@ -40,7 +40,7 @@ h1{
 <html lang="en">
 
 <head>
-	<title>لوحة تحكم العميل</title>
+	<title>لوحة تحكم المسؤول</title>
 
 	<link
 		href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic"
@@ -70,8 +70,8 @@ h1{
 			<section id="page-title">
 				<div class="row">
 					<div>
-						<h1 style="text-align: right;"><b><?php echo $user;?></b></h1>
-						<h1>لوحة تحكم العميل<h2 style="text-align: right;"><a href = "logout.php">Sign Out</a></h2></h1>
+					<h1 style="text-align: right;"><b><?php echo $user;?></b></h1>
+						<h1>لوحة تحكم المسؤول<h2 style="text-align: right;"><a href = "adminlogout.php">Sign Out</a></h2></h1>
 
 					</div>
 
@@ -86,11 +86,11 @@ h1{
 							<div class="panel-body">
 								<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i
 										class="fa fa-smile-o fa-stack-1x fa-inverse"></i> </span>
-								<h2 class="StepTitle">حسابي</h2>
+								<h2 class="StepTitle">سجلات العملاء</h2>
 
 								<p class="links cl-effect-1">
-									<a href="edit-profile.php">
-										معلومات الحساب
+									<a href="customers-b.php">
+										جميع العملاء
 									</a>
 								</p>
 							</div>
@@ -101,11 +101,11 @@ h1{
 							<div class="panel-body">
 								<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i
 										class="fa fa-paperclip fa-stack-1x fa-inverse"></i> </span>
-								<h2 class="StepTitle">طلباتي</h2>
+								<h2 class="StepTitle">سجلات السائقين</h2>
 
 								<p class="cl-effect-1">
-									<a href="appointment-history.php">
-										جميع الطلبات
+									<a href="manage-drivers-b.php">
+										جميع السائقين
 									</a>
 								</p>
 							</div>
@@ -116,11 +116,11 @@ h1{
 							<div class="panel-body">
 								<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i
 										class="fa fa-terminal fa-stack-1x fa-inverse"></i> </span>
-								<h2 class="StepTitle">طلب جديد</h2>
+								<h2 class="StepTitle">إضافة سائق</h2>
 
 								<p class="links cl-effect-1">
-									<a href="book-appointment.php">
-										طلب جديد
+									<a href="driverreg.php">
+										سائق جديد
 									</a>
 								</p>
 							</div>

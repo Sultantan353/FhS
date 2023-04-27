@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <?php
-   include('session.php');
-   $user = $_SESSION['login_user'];
+    include("config.php");
 ?>
 <html lang="en">
 	<head>
-		<title>طلباتي</title>
+		<title>الطلبات الخاصة بي</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -28,7 +27,7 @@
 						<section id="page-title">
 							<div class="row">
 								<div>
-									<h1 class="mainTitle" style="text-align: center;">طلباتي</h1>
+									<h1 class="mainTitle" style="text-align: center;">الطلبات الخاصة بي</h1>
 																	
 						</section>
 						<!-- end: PAGE TITLE -->
@@ -40,7 +39,7 @@
 								<div class="col-md-12">
 									
 									<table class="table table-hover" id="sample-table-1">
-										<thead>
+									<thead>
 											<tr>
 												
 												<th>رقم التواصل الخاص</th>
@@ -49,11 +48,12 @@
 												<th>رقم هيكل السيارة  </th>
 												<th>نوع السيارة</th>
 												<th>نوع  الخدمة</th>
-												
+												<th>إسم العميل</th>
+
 											</tr>
 											<?php
 
-$req = "select * from orders where username='$user'";
+$req = "select * from orders";
 $query = mysqli_query($conn,$req);
 while($fetch=mysqli_fetch_assoc($query))
 {
@@ -66,7 +66,8 @@ while($fetch=mysqli_fetch_assoc($query))
 												<td><?php echo $fetch['numcar'] ;?></td>
 												<td><?php echo $fetch['car'] ;?></td>
 												<td><?php echo $fetch['servic'] ;?></td>
-												
+												<td><?php echo $fetch['username'] ;?></td>
+
 											</tr>
 											<?php } ?>
 										</thead>

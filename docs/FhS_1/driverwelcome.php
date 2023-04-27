@@ -1,3 +1,7 @@
+<?php
+   include('driversession.php');
+   $user = $_SESSION['login_user'];
+?>
 <html>
 <head>
       <style> 
@@ -36,7 +40,7 @@ h1{
 <html lang="en">
 
 <head>
-	<title>لوحة تحكم المسؤول</title>
+	<title>لوحة تحكم السائق</title>
 
 	<link
 		href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic"
@@ -66,7 +70,8 @@ h1{
 			<section id="page-title">
 				<div class="row">
 					<div>
-						<h1>لوحة تحكم المسؤول<h2 style="text-align: right;"><a href = "">Sign Out</a></h2></h1>
+						<h1 style="text-align: right;"><b><?php echo $user;?></b></h1>
+						<h1>لوحة تحكم السائق<h2 style="text-align: right;"><a href = "driverlogout.php">Sign Out</a></h2></h1>
 
 					</div>
 
@@ -81,11 +86,11 @@ h1{
 							<div class="panel-body">
 								<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i
 										class="fa fa-smile-o fa-stack-1x fa-inverse"></i> </span>
-								<h2 class="StepTitle">سجلات العملاء</h2>
+								<h2 class="StepTitle">حسابي</h2>
 
 								<p class="links cl-effect-1">
-									<a href="customers-b.html">
-										جميع العملاء
+									<a href="edit-profile-a.php">
+										معلومات الحساب
 									</a>
 								</p>
 							</div>
@@ -96,31 +101,17 @@ h1{
 							<div class="panel-body">
 								<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i
 										class="fa fa-paperclip fa-stack-1x fa-inverse"></i> </span>
-								<h2 class="StepTitle">سجلات السائقين</h2>
+								<h2 class="StepTitle">طلباتي</h2>
 
 								<p class="cl-effect-1">
-									<a href="manage-drivers-b.html">
-										جميع السائقين
+									<a href="appointment-history-a.php">
+										الطلبات الخاصة بي 
 									</a>
 								</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4">
-						<div class="panel panel-white no-radius text-center">
-							<div class="panel-body">
-								<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i
-										class="fa fa-terminal fa-stack-1x fa-inverse"></i> </span>
-								<h2 class="StepTitle">إضافة سائق</h2>
-
-								<p class="links cl-effect-1">
-									<a href="add-driver.html">
-										سائق جديد
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div>

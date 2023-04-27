@@ -64,37 +64,33 @@ h1{
     <div class="box">
    <form action = "" method = "post">
       <h1>UserName  :</h1><input type = "text" name = "username"class="email"/><br /><br />
-      <h1>city  :</h1><input type = "text" name = "city"class="email"/><br /><br />
-      <h1>age  :</h1><input type = "text" name = "age"class="email"/><br /><br />
-      <h1>E-mail  :</h1><input type = "text" name = "email" class="email"/><br /><br />
       <h1>Password  :</h1><input type = "password" name = "password" class="password"/><br/><br />
+        <h1>E-mail  :</h1><input type = "text" name = "email" class="email"/><br /><br />
       <input type = "submit" name="register" value = "Register" id="btn2"/><br />
    </form>
 </div>
 </body></html>
 <?php
-    include("config.php");
+    include("adminconfig.php");
     if(isset($_POST['register']))
     {
         $username = $_POST['username'];
-        $city = $_POST['city'];
-        $age = $_POST['age'];
-        $email = $_POST['email'];
         $password = $_POST['password'];
+        $email = $_POST['email'];
         
-        $sqlcheck = "SELECT username FROM login WHERE username = '$username'";
+        $sqlcheck = "SELECT username FROM admin WHERE username = '$username'";
         $resultcheck = mysqli_query($conn, $sqlcheck); 
         if (mysqli_num_rows($resultcheck) > 0)
             echo ("user name already taken");
         else
         {
-            $sql = "INSERT INTO login(username,city,age,password1,email)
-            VALUES('$username','$city','$age','$password','$email')";
+            $sql = "INSERT INTO admin(username,password1,email)
+            VALUES('$username','$password','$email')";
             $result = mysqli_query($conn, $sql);
             if ($result == TRUE) 
             {
                 //echo "Save Ok<br/>";
-                header("location: login.php");
+                header("location: adminlogin.php");
             }
             else 
                 echo "Save failed<br/>";

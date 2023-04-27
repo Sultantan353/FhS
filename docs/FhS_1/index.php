@@ -40,7 +40,7 @@
 					<div class="text list_1_of_2">
 						  <h3>تسجيل دخول السائقين</h3>
 						
-						  <div class="button"><span><a href="">تسجيل الدخول</a></span></div>
+						  <div class="button"><span><a href="driverlogin.php">تسجيل الدخول</a></span></div>
 					</div>
 				</div>
 
@@ -52,7 +52,7 @@
 					<div class="text list_1_of_2">
 						  <h3>تسجيل دخول المسؤول</h3>
 						
-						  <div class="button"><span><a href="">تسجيل الدخول</a></span></div>
+						  <div class="button"><span><a href="adminlogin.php">تسجيل الدخول</a></span></div>
 				     </div>
 				</div>			
 			</div>

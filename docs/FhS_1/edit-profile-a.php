@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+   include('driversession.php');
+   $user = $_SESSION['login_user'];
+?>
 <html lang="en">
 
 <head>
@@ -42,7 +46,13 @@
 										<h5 class="panel-title">تحرير الحساب</h5>
 									</div>
 									<div class="panel-body">
+									<?php
 
+$req = "select * from driver where username='$user'";
+$query = mysqli_query($conn,$req);
+while($fetch=mysqli_fetch_assoc($query))
+{
+?>
 										<form>
 
 
@@ -50,42 +60,31 @@
 												<label for="fname">
 													اسم المستخدم
 												</label>
-												<input type="text" name="fname" class="form-control">
+												<input type="text" name="fname" class="form-control" readonly="readonly" value="<?php echo $fetch['username'] ;?>">
 											</div>
 
 
 											<div class="form-group">
 												<label for="address">
-													العنوان
+													المدينة
 												</label>
-												<textarea name="address" class="form-control"></textarea>
+												<input type="text" name="city" class="form-control" readonly="readonly" value="<?php echo $fetch['city'] ;?>">
 											</div>
 											<div class="form-group">
 												<label for="city">
-													المدينة
+													العمر
 												</label>
-												<input type="text" name="city" class="form-control" required="required">
+												<input type="text" name="age" class="form-control" readonly="readonly" value="<?php echo $fetch['age'] ;?>">
 											</div>
 
-											<div class="form-group">
-												<label for="gender">
-													الجنس
-												</label>
-
-												<select name="gender" class="form-control" required="required">
-													<option value="male">ذكر</option>
-													<option value="female">انثى</option>
-												</select>
-
-											</div>
+											
 
 											<div class="form-group">
 												<label for="fess">
 													البريد الالكتروني
 												</label>
 												<input type="email" name="uemail" class="form-control"
-													readonly="readonly">
-												<a href="">تحديث البريد الالكتروني</a>
+													readonly="readonly" value="<?php echo $fetch['email'] ;?>">
 											</div>
 
 
@@ -94,10 +93,11 @@
 
 
 
-											<button type="submit" name="submit" class="btn btn-o btn-primary">
-												تحديث
-											</button>
+											
 										</form>
+										<?php 
+ }
+ ?>
 									</div>
 								</div>
 							</div>
