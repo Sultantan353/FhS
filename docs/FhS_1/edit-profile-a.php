@@ -1,12 +1,12 @@
-<!DOCTYPE html>
 <?php
-   include('driversession.php');
+    include('driversession.php');
+
    $user = $_SESSION['login_user'];
 ?>
 <html lang="en">
 
 <head>
-	<title>تحرير الحساب</title>
+	<title>معلومات الحساب</title>
 
 	<link
 		href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic"
@@ -33,7 +33,7 @@
 		<div class="wrap-content container" style="width: 500px;">
 			<section id="page-title">
 				<div>
-					<h1 class="mainTitle" style="text-align: center;">تحرير معلومات الحساب</h1>
+					<h1 class="mainTitle" style="text-align: center;"> معلومات الحساب</h1><h2 style="text-align: right;"><a href = "driverwelcome.php">back</a></h2>
 				</div>
 			</section>
 			<div>
@@ -43,7 +43,7 @@
 							<div>
 								<div class="panel panel-white">
 									<div class="panel-heading">
-										<h5 class="panel-title">تحرير الحساب</h5>
+										<h5 class="panel-title">معلومات الحساب</h5>
 									</div>
 									<div class="panel-body">
 									<?php
@@ -53,14 +53,24 @@ $query = mysqli_query($conn,$req);
 while($fetch=mysqli_fetch_assoc($query))
 {
 ?>
-										<form>
-
-
+										<form action="" method="post">
+										<div class="form-group">
+												<label for="fname">
+													رقم المستخدم
+												</label>
+												<input type="text" readonly="readonly" name="fname" class="form-control"  value="<?php echo $fetch['id'] ;?>">
+											</div>
+											<div class="form-group">
+												<label for="fname">
+													حالة المستخدم
+												</label>
+												<input type="text" readonly="readonly" name="fname" class="form-control"  value="<?php echo $fetch['status'] ;?>">
+											</div>
 											<div class="form-group">
 												<label for="fname">
 													اسم المستخدم
 												</label>
-												<input type="text" name="fname" class="form-control" readonly="readonly" value="<?php echo $fetch['username'] ;?>">
+												<input type="text" name="fname" class="form-control"  value="<?php echo $fetch['username'] ;?>">
 											</div>
 
 
@@ -68,16 +78,22 @@ while($fetch=mysqli_fetch_assoc($query))
 												<label for="address">
 													المدينة
 												</label>
-												<input type="text" name="city" class="form-control" readonly="readonly" value="<?php echo $fetch['city'] ;?>">
+												<input type="text" name="city" class="form-control"  value="<?php echo $fetch['city'] ;?>">
 											</div>
 											<div class="form-group">
 												<label for="city">
 													العمر
 												</label>
-												<input type="text" name="age" class="form-control" readonly="readonly" value="<?php echo $fetch['age'] ;?>">
+												<input type="text" name="age" class="form-control"  value="<?php echo $fetch['age'] ;?>">
 											</div>
 
-											
+											<div class="form-group">
+												<label for="fess">
+													كلمة المرور 
+												</label>
+												<input type="text" name="password" class="form-control"
+													 value="<?php echo $fetch['password1'] ;?>">
+											</div>
 
 											<div class="form-group">
 												<label for="fess">
@@ -86,10 +102,38 @@ while($fetch=mysqli_fetch_assoc($query))
 												<input type="email" name="uemail" class="form-control"
 													readonly="readonly" value="<?php echo $fetch['email'] ;?>">
 											</div>
+											
 
+											<input type="submit" name="update" class="btn btn-o btn-primary">
+<?php
+											if(isset($_POST['update']))
+    {
+		
 
-
-
+        $username = $_POST['fname'];
+        $city = $_POST['city'];
+        $age = $_POST['age'];
+        $email = $_POST['uemail'];
+        $password = $_POST['password'];
+        
+        
+            $sql = "UPDATE driver 
+			SET username='$username',city='$city',age='$age',password1='$password'
+			WHERE email='$email';";
+            $result = mysqli_query($conn, $sql);
+            if ($result == TRUE) 
+            {
+                //echo "Save Ok<br/>";
+				$_SESSION['login_user']=$username;
+				$user = $_SESSION['login_user'];
+                header("location: driverwelcome.php");
+            }
+            else 
+                echo "Save failed<br/>";
+        
+    }
+    mysqli_close($conn);
+?>
 
 
 
@@ -98,6 +142,7 @@ while($fetch=mysqli_fetch_assoc($query))
 										<?php 
  }
  ?>
+ 
 									</div>
 								</div>
 							</div>

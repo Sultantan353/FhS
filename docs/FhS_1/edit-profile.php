@@ -1,5 +1,6 @@
 <?php
     include('session.php');
+
    $user = $_SESSION['login_user'];
 ?>
 <html lang="en">
@@ -32,7 +33,7 @@
 		<div class="wrap-content container" style="width: 500px;">
 			<section id="page-title">
 				<div>
-					<h1 class="mainTitle" style="text-align: center;"> معلومات الحساب</h1>
+					<h1 class="mainTitle" style="text-align: center;"> معلومات الحساب</h1><h2 style="text-align: right;"><a href = "welcome.php">BACK</a></h2>
 				</div>
 			</section>
 			<div>
@@ -52,14 +53,14 @@ $query = mysqli_query($conn,$req);
 while($fetch=mysqli_fetch_assoc($query))
 {
 ?>
-										<form>
+										<form action="" method="post">
 
 
 											<div class="form-group">
 												<label for="fname">
 													اسم المستخدم
 												</label>
-												<input type="text" name="fname" class="form-control" readonly="readonly" value="<?php echo $fetch['username'] ;?>">
+												<input type="text" name="fname" class="form-control"  value="<?php echo $fetch['username'] ;?>">
 											</div>
 
 
@@ -67,16 +68,22 @@ while($fetch=mysqli_fetch_assoc($query))
 												<label for="address">
 													المدينة
 												</label>
-												<input type="text" name="city" class="form-control" readonly="readonly" value="<?php echo $fetch['city'] ;?>">
+												<input type="text" name="city" class="form-control"  value="<?php echo $fetch['city'] ;?>">
 											</div>
 											<div class="form-group">
 												<label for="city">
 													العمر
 												</label>
-												<input type="text" name="age" class="form-control" readonly="readonly" value="<?php echo $fetch['age'] ;?>">
+												<input type="text" name="age" class="form-control"  value="<?php echo $fetch['age'] ;?>">
 											</div>
 
-											
+											<div class="form-group">
+												<label for="fess">
+													كلمة المرور 
+												</label>
+												<input type="text" name="password" class="form-control"
+													 value="<?php echo $fetch['password1'] ;?>">
+											</div>
 
 											<div class="form-group">
 												<label for="fess">
@@ -85,10 +92,38 @@ while($fetch=mysqli_fetch_assoc($query))
 												<input type="email" name="uemail" class="form-control"
 													readonly="readonly" value="<?php echo $fetch['email'] ;?>">
 											</div>
+											
 
+											<input type="submit" name="update" class="btn btn-o btn-primary">
+<?php
+											if(isset($_POST['update']))
+    {
+		
 
-
-
+        $username = $_POST['fname'];
+        $city = $_POST['city'];
+        $age = $_POST['age'];
+        $email = $_POST['uemail'];
+        $password = $_POST['password'];
+        
+        
+            $sql = "UPDATE login 
+			SET username='$username',city='$city',age='$age',password1='$password'
+			WHERE email='$email';";
+            $result = mysqli_query($conn, $sql);
+            if ($result == TRUE) 
+            {
+                //echo "Save Ok<br/>";
+				$_SESSION['login_user']=$username;
+				$user = $_SESSION['login_user'];
+                header("location: welcome.php");
+            }
+            else 
+                echo "Save failed<br/>";
+        
+    }
+    mysqli_close($conn);
+?>
 
 
 

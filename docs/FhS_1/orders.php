@@ -7,7 +7,7 @@
 ?>
 <html lang="en">
 	<head>
-		<title>جميع السائقين</title>
+		<title>جميع الطلبات</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -28,10 +28,9 @@
 		
 					<div class="wrap-content container" id="container">
 						<section id="page-title">
-							<form action="" method="post">
 							<div class="row">
 								<div>
-									<h1 class="mainTitle" style="text-align: center;">جميع السائقين</h1><h2 style="text-align: right;"><a href = "adminwelcome.php">back</a></h2>
+									<h1 class="mainTitle" style="text-align: center;">جميع الطلبات</h1><h2 style="text-align: right;"><a href = "adminwelcome.php">back</a></h2>
 																	</div>
 								
 							</div>
@@ -48,82 +47,41 @@
 										<thead>
 											<tr>
 											<!--	<th class="center">االتسلسل</th> -->
-											<th>التاريخ</th>
-
-											<th>البريد الالكترني</th>
-												<th class="hidden-xs">العمر</th>
-												<th>المدينة</th>
-												<th>إسم السائق</th>
-												<th>حالة السائق</th>
-												<th>رقم السائق</th>
-												<th>تفعيل السائق</th>
-
-
-
+											
+                                            <th class="hidden-xs">تاريخ الطلب</th>
+                                            <th class="hidden-xs">المدينة</th>
+                                            <th class="hidden-xs">جوال العميل</th>
+                                            <th class="hidden-xs">رقم هيكل السيارة</th>
+                                            <th class="hidden-xs">نوع السيارة</th>
+                                            <th class="hidden-xs">نوع الخدمة</th>
+                                            <th class="hidden-xs">اسم مقدم الخدمة</th>
+                                            <th class="hidden-xs">اسم العميل</th>
+                                            <th class="hidden-xs">حالة الطلب</th>
+                                            <th class="hidden-xs">رقم الطلب</th>
+												
 												
 											</tr>
 										</thead>
 										<tbody>
 										<?php
 
-$req = "select * from driver";
+$req = "select * from orders";
 $query = mysqli_query($conn,$req);
-while($fetch=mysqli_fetch_array($query))
+while($fetch=mysqli_fetch_assoc($query))
 {
 ?>
 <tr>
 <td><?php echo $fetch['created_at'] ;?></td>
-<td><?php echo $fetch['email'] ;?></td>
-<td><?php echo $fetch['age'] ;?></td>
 <td><?php echo $fetch['city'] ;?></td>
+<td><?php echo $fetch['phone'] ;?></td>
+<td><?php echo $fetch['numcar'] ;?></td>
+<td><?php echo $fetch['car'] ;?></td>
+<td><?php echo $fetch['servic'] ;?></td>
+<td><?php echo $fetch['driver'] ;?></td>
 <td><?php echo $fetch['username'] ;?></td>
 <td><?php echo $fetch['status1'] ;?></td>
 <td><?php echo $fetch['id'] ;?></td>
-<td>
-	<?php
-	if($fetch['status']==1){
-		echo '<p><a href="status.php?id='.$fetch['id'].'&status=0">إلغاء التفعيل</a></p>';
-	}else{
-		echo '<p><a href="status.php?id='.$fetch['id'].'&status=1">تفعيل</a></p>';
-	}
-	?>
-</td>
-
-
 </tr>
-<form>
-	<?php
-/*	if(isset($_POST['receive']))
-    {				
-
-    $conn = new mysqli(servername, username, password, dbname);
-
-        $username = $fetch['username'];
-        
-        
-        
-            $sql = "UPDATE driver 
-			SET status='authorized'
-			WHERE username='$username';";
-            $result = mysqli_query($conn, $sql);
-            if ($result == TRUE) 
-            {
-
-
-                echo "Save Ok<br/>";
-				header("refresh:0;");
-
-				//$_SESSION['login_user']=$username;
-				//$user = $_SESSION['login_user'];
-               // header("location: welcome.php");
-            }
-            else{                echo "Save failed<br/>";
-} 
-       				
- 				
-
-    }
-	*/?>
 <?php 
  }?>								
 										</tbody>

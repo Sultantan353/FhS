@@ -116,11 +116,11 @@ h1{
 							<div class="panel-body">
 								<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i
 										class="fa fa-terminal fa-stack-1x fa-inverse"></i> </span>
-								<h2 class="StepTitle">إضافة سائق</h2>
+								<h2 class="StepTitle">سجلات الطلبات</h2>
 
 								<p class="links cl-effect-1">
-									<a href="driverreg.php">
-										سائق جديد
+									<a href="orders.php">
+										جميع الطلبات 
 									</a>
 								</p>
 							</div>

@@ -101,17 +101,31 @@ h1{
 							<div class="panel-body">
 								<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i
 										class="fa fa-paperclip fa-stack-1x fa-inverse"></i> </span>
-								<h2 class="StepTitle">طلباتي</h2>
+								<h2 class="StepTitle">الطلبات الجديدة</h2>
 
 								<p class="cl-effect-1">
 									<a href="appointment-history-a.php">
+										الطلبات الجديدة  
+									</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="panel panel-white no-radius text-center">
+							<div class="panel-body">
+								<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i
+										class="fa fa-paperclip fa-stack-1x fa-inverse"></i> </span>
+								<h2 class="StepTitle">طلباتي</h2>
+
+								<p class="cl-effect-1">
+									<a href="appointment-history-mya.php">
 										الطلبات الخاصة بي 
 									</a>
 								</p>
 							</div>
 						</div>
 					</div>
-					
 				</div>
 			</div>
 		</div>

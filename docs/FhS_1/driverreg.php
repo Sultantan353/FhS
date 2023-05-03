@@ -88,13 +88,13 @@ h1{
             echo ("user name already taken");
         else
         {
-            $sql = "INSERT INTO driver(username,age,city,password1,email)
-            VALUES('$username','$age','$city','$password','$email')";
+            $sql = "INSERT INTO driver(status,status1,username,age,city,password1,email)
+            VALUES(0,'Unauthorized','$username','$age','$city','$password','$email')";
             $result = mysqli_query($conn, $sql);
             if ($result == TRUE) 
             {
                 echo "تم اضافة سائق<br/>";
-                //header("location: driverlogin.php");
+                header("location: driverlogin.php");
             }
             else 
                 echo "Save failed<br/>";

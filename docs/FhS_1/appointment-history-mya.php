@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <?php
-   include('session.php');
+	include('driversession.php');
+
+ //  include('driverconfig.php');
    $user = $_SESSION['login_user'];
 ?>
 <html lang="en">
 	<head>
-		<title>طلباتي</title>
+		<title>الطلبات الخاصة بي</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -28,11 +30,12 @@
 						<section id="page-title">
 							<div class="row">
 								<div>
-									<h1 class="mainTitle" style="text-align: center;">طلباتي</h1><h2 style="text-align: right;"><a href = "welcome.php">BACK</a></h2>
+									<h1 class="mainTitle" style="text-align: center;">الطلبات الخاصة بي</h1><h2 style="text-align: right;"><a href = "driverwelcome.php">back</a></h2>
 																	
 						</section>
 						<!-- end: PAGE TITLE -->
 						<!-- start: BASIC EXAMPLE -->
+						<form action="" method="post">
 						<div class="container-fluid container-fullw bg-white">
 						
 
@@ -40,7 +43,7 @@
 								<div class="col-md-12">
 									
 									<table class="table table-hover" id="sample-table-1">
-										<thead>
+									<thead>
 											<tr>
 												
 												<th>رقم التواصل الخاص</th>
@@ -49,15 +52,17 @@
 												<th>رقم هيكل السيارة  </th>
 												<th>نوع السيارة</th>
 												<th>نوع  الخدمة</th>
-												<th>اسم  مقدم الخدمة</th>
-												<th>حالة  الطلب</th>
-												<th>رقم  الطلب</th>
+												<th>إسم العميل</th>
+												<th>حالة الطلب</th>
+												<th>رقم الطلب</th>
+												<th>انهاء الطلب</th>
 
-												
+
+
+
 											</tr>
 											<?php
-
-$req = "select * from orders where username='$user'";
+$req = "select * from orders where driver='$user'";
 $query = mysqli_query($conn,$req);
 while($fetch=mysqli_fetch_assoc($query))
 {
@@ -70,18 +75,56 @@ while($fetch=mysqli_fetch_assoc($query))
 												<td><?php echo $fetch['numcar'] ;?></td>
 												<td><?php echo $fetch['car'] ;?></td>
 												<td><?php echo $fetch['servic'] ;?></td>
-												<td><?php echo $fetch['driver'] ;?></td>
+												<td><?php echo $fetch['username'] ;?></td>
 												<td><?php echo $fetch['status1'] ;?></td>
 												<td><?php echo $fetch['id'] ;?></td>
+												<td>
+												<?php
+	if($fetch['status']==1){
+		echo '<p><a href="statusorder1.php?id='.$fetch['id'].'&status=2 &user='.$user.'">تم التنفيذ</a></p>';
+	}else{
+		echo '<p>منتهي</p>';
+	}
+	?>
+												</td>
 
-												
 											</tr>
-											<?php } ?>
+										</form>	<?php
+			/*	if(isset($_POST['receive']))
+    {                header("refresh:0;");
+
+		    $conn = new mysqli(servername, username, password, dbname);
+
+
+        $username = $fetch['username'];
+        
+        
+        
+            $sql = "UPDATE orders 
+			SET status='The request has been executed'
+			WHERE username='$username';";
+            $result = mysqli_query($conn, $sql);
+            if ($result == TRUE) 
+            {
+                        
+               mysqli_close($conn);
+                echo "Save Ok<br/>";
+
+				//$_SESSION['login_user']=$username;
+				//$user = $_SESSION['login_user'];
+               // header("location: welcome.php");
+            }
+            else 
+                echo "Save failed<br/>";
+    }*/
+    
+?><?php } ?>
 										</thead>
 										<tbody>
 
 					</div>
 				</div>
-			
+				
+
 	</body>
 </html>

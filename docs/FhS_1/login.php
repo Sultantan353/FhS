@@ -6,6 +6,7 @@
     {
         $myusername = $_POST['username'];
         $mypassword =$_POST['password']; 
+        
         $sql = "SELECT username,password1 FROM login WHERE 
         username = '$myusername' and password1 = '$mypassword'";
         $result=mysqli_query($conn, $sql);
@@ -96,3 +97,4 @@ background:#3594D2;
     <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
  </div>  
 </body></html>
+

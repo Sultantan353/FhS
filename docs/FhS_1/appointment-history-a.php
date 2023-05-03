@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <?php
-    include("config.php");
+	include('driversession.php');
+
+ //  include('driverconfig.php');
+   $user = $_SESSION['login_user'];
 ?>
 <html lang="en">
 	<head>
-		<title>الطلبات الخاصة بي</title>
+		<title>الطلبات الجديدة </title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -27,11 +30,12 @@
 						<section id="page-title">
 							<div class="row">
 								<div>
-									<h1 class="mainTitle" style="text-align: center;">الطلبات الخاصة بي</h1>
+									<h1 class="mainTitle" style="text-align: center;">الطلبات  الجديدة</h1><h2 style="text-align: right;"><a href = "driverwelcome.php">back</a></h2>
 																	
 						</section>
 						<!-- end: PAGE TITLE -->
 						<!-- start: BASIC EXAMPLE -->
+						<form action="" method="post">
 						<div class="container-fluid container-fullw bg-white">
 						
 
@@ -49,11 +53,16 @@
 												<th>نوع السيارة</th>
 												<th>نوع  الخدمة</th>
 												<th>إسم العميل</th>
+												<th>حالة الطلب</th>
+												<th>رقم الطلب</th>
+												<th>استلام الطلب</th>
+
+
+
 
 											</tr>
 											<?php
-
-$req = "select * from orders";
+$req = "select * from orders where status1='new'";
 $query = mysqli_query($conn,$req);
 while($fetch=mysqli_fetch_assoc($query))
 {
@@ -67,14 +76,61 @@ while($fetch=mysqli_fetch_assoc($query))
 												<td><?php echo $fetch['car'] ;?></td>
 												<td><?php echo $fetch['servic'] ;?></td>
 												<td><?php echo $fetch['username'] ;?></td>
+												<td><?php echo $fetch['status1'] ;?></td>
+												<td><?php echo $fetch['id'] ;?></td>
+												<td>
+												<?php
+	if($fetch['status']==1){
+		echo '<p><a href="statusorder.php?id='.$fetch['id'].'&status=0 &user='.$user.'">إلغاء التفعيل</a></p>';
+	}else{
+		echo '<p><a href="statusorder.php?id='.$fetch['id'].'&status=1 &user='.$user.'">إستلام الطلب</a></p>';
+	}
+	?>
+												</td>
+
 
 											</tr>
-											<?php } ?>
+										</form><?php
+				/* if(isset($_POST['receive']))
+    {				
+
+    $conn = new mysqli(servername, username, password, dbname);
+
+        $username = $fetch['username'];
+        
+        
+        
+            $sql = "UPDATE orders 
+			SET status='Receipt of the request',driver='$user'
+			WHERE username='$username';";
+            $result = mysqli_query($conn, $sql);
+            if ($result == TRUE) 
+            {
+
+
+                echo "Save Ok<br/>";
+				header("refresh:0;");
+
+				//$_SESSION['login_user']=$username;
+				//$user = $_SESSION['login_user'];
+               // header("location: welcome.php");
+            }
+            else{                echo "Save failed<br/>";
+} 
+       				
+ 				
+
+    }*/
+    
+?>	<?php }mysqli_close($conn);
+											
+											?>
 										</thead>
 										<tbody>
 
 					</div>
 				</div>
-			
+				
+
 	</body>
 </html>

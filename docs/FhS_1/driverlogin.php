@@ -6,8 +6,10 @@
     {
         $myusername = $_POST['username'];
         $mypassword =$_POST['password']; 
+        $mystatus = 1; 
+
         $sql = "SELECT username,password1 FROM driver WHERE 
-        username = '$myusername' and password1 = '$mypassword'";
+        username = '$myusername' and password1 = '$mypassword'and status = '$mystatus'";
         $result=mysqli_query($conn, $sql);
         if (mysqli_num_rows($result)>0)
         {
@@ -92,6 +94,8 @@ background:#3594D2;
       <h1>Password  :</h1><input type = "password" name = "password" class="password"/><br/><br />
       <input type = "submit" name="submit" value = " Submit " id="btn2"/><br />
 </form>
+<a href="driverreg.php">New user</a>
+
     <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
  </div>  
 </body></html>

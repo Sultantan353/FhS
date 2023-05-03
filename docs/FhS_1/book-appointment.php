@@ -31,12 +31,11 @@
 		<div class="app-content">
 			<div>
 				<div class="wrap-content container" style="width: max-content;">
-					<section id="page-title">
-						<div class="row">
-							<div class="col-sm-8">
-								<h1 class="mainTitle">إنشاء طلب جديد</h1>
-
-					</section>
+				<section id="page-title">
+				<div>
+					<h1 class="mainTitle" style="text-align: center;"> طلب جديد</h1><h2 style="text-align: right;"><a href = "welcome.php">BACK</a></h2>
+				</div>
+			</section>
 					<div class="container-fluid container-fullw bg-white">
 						<div class="row">
 							<div>
@@ -119,15 +118,16 @@ if(isset($_POST['a']))
         $city = $_POST['city'];
         $phone = $_POST['phone'];
         
-        $req = "INSERT INTO orders(servic,car,numcar,city,phone)
+  /*      $req = "INSERT INTO orders(servic,car,numcar,city,phone)
 		VALUES('$servic','$car','$numcar','$city','$phone')";
-$query = mysqli_query($conn,$req);
-            $sql = "INSERT INTO orders(username,servic,car,numcar,city,phone)
-            VALUES('$user','$servic','$car','$numcar','$city','$phone')";
+$query = mysqli_query($conn,$req);*/
+            $sql = "INSERT INTO orders(status,status1,username,servic,car,numcar,city,phone)
+            VALUES(0,'new','$user','$servic','$car','$numcar','$city','$phone')";
             $result = mysqli_query($conn, $sql);
             if ($result == TRUE) 
             {
-                echo "تم انشاء الطلب<br/>";
+                //header("location: welcome.php");
+               // echo "تم انشاء الطلب<br/>";
             }
             else 
                 echo "خطأ<br/>";
