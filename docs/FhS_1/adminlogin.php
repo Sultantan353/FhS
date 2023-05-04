@@ -20,78 +20,96 @@
     mysqli_close($conn);
    }
 ?>
-<html>
-    <head>
-      <style> 
-      body{
-  font-family: 'Open Sans', sans-serif;
-  background:#ecf0f1;
-  margin: 0 auto 0 auto;  
-  width:100%; 
-  text-align:center;
-  margin: 20px 0px 20px 0px;   
-}
-h1{
-  font-size:1.5em;
-  color:#525252;
-}
-      #btn2{
-  float:center;
-  background:#3498db;
-  width:125px;  padding-top:5px;
-  padding-bottom:5px;
-  color:white;
-  border-radius:4px;
-  border: #2980b9 1px solid;
-  
-  margin-top:20px;
-  margin-bottom:20px;
-  margin-left:10px;
-  font-weight:800;
-  font-size:0.8em;
-}
-.box{
-  background:white;
-  width:300px;
-  border-radius:6px;
-  margin: 0 auto 0 auto;
-  padding:0px 0px 70px 0px;
-  border: #2980b9 4px solid; 
-}
+<html lang="en">
 
-.email{
-  background:#ecf0f1;
-  border: #ccc 1px solid;
-  border-bottom: #ccc 2px solid;
-  padding: 8px;
-  width:250px;
-  color:#AAAAAA;
-  margin-top:10px;
-  font-size:1em;
-  border-radius:4px;
-}
+<head>
+	<title>معلومات الحساب</title>
 
-.password{
-  border-radius:4px;
-  background:#ecf0f1;
-  border: #ccc 1px solid;
-  padding: 8px;
-  width:250px;
-  font-size:1em;
-}
+	<link
+		href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic"
+		rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendor/themify-icons/themify-icons.min.css">
+	<link href="vendor/animate.css/animate.min.css" rel="stylesheet" media="screen">
+	<link href="vendor/perfect-scrollbar/perfect-scrollbar.min.css" rel="stylesheet" media="screen">
+	<link href="vendor/switchery/switchery.min.css" rel="stylesheet" media="screen">
+	<link href="vendor/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" media="screen">
+	<link href="vendor/select2/select2.min.css" rel="stylesheet" media="screen">
+	<link href="vendor/bootstrap-datepicker/bootstrap-datepicker3.standalone.min.css" rel="stylesheet" media="screen">
+	<link href="vendor/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/plugins.css">
+	<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
 
-#btn2:hover{ 
-background:#3594D2; 
-} 
-        </style>
-    </head>
+
+</head>
 <body>
-    <div class="box">
+<div>
+		<div class="wrap-content container" style="width: 500px;">
+			<section id="page-title">
+				<div>
+					<h1 class="mainTitle" style="text-align: center;">تسجيل الدخول</h1><h2 style="text-align: right;"><a href = "index.php">BACK</a></h2>
+				</div>
+			</section>
+			<div>
+				<div class="row">
+					<div>
+						<div>
+							<div>
+								<div class="panel panel-white">
+									<div class="panel-heading">
+										<h5 class="panel-title">تسجيل الدخول</h5>
+									</div>
+									<div class="panel-body">
+									
+										<form action="" method="post">
+
+
+											<div class="form-group">
+												<label for="fname">
+													اسم المستخدم
+												</label>
+												<input type="text" name="username" class="form-control">
+											</div>
+
+
+											
+											
+
+											<div class="form-group">
+												<label for="fess">
+													كلمة المرور 
+												</label>
+												<input type="password" name="password" class="form-control">
+											</div>
+
+											
+											
+
+											<input type="submit" name="submit" value="تسجيل الدخول" class="btn btn-o btn-primary">
+
+										</form>
+										
+ 
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+   <!-- <div class="box">
    <form action = "" method = "post">
       <h1>UserName  :</h1><input type = "text" name = "username" class="email"/><br /><br />
       <h1>Password  :</h1><input type = "password" name = "password" class="password"/><br/><br />
       <input type = "submit" name="submit" value = " Submit " id="btn2"/><br />
 </form>
     <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
- </div>  
+ </div>  -->
 </body></html>

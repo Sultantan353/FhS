@@ -77,14 +77,14 @@ while($fetch=mysqli_fetch_assoc($query))
 												<input type="text" name="age" class="form-control"  value="<?php echo $fetch['age'] ;?>">
 											</div>
 
-											<div class="form-group">
+								<!--			<div class="form-group">
 												<label for="fess">
 													كلمة المرور 
 												</label>
 												<input type="text" name="password" class="form-control"
 													 value="<?php echo $fetch['password1'] ;?>">
 											</div>
-
+-->
 											<div class="form-group">
 												<label for="fess">
 													البريد الالكتروني
@@ -104,19 +104,19 @@ while($fetch=mysqli_fetch_assoc($query))
         $city = $_POST['city'];
         $age = $_POST['age'];
         $email = $_POST['uemail'];
-        $password = $_POST['password'];
+     //   $password = $_POST['password'];
         
         
             $sql = "UPDATE login 
-			SET username='$username',city='$city',age='$age',password1='$password'
+			SET username='$username',city='$city',age='$age'
 			WHERE email='$email';";
             $result = mysqli_query($conn, $sql);
             if ($result == TRUE) 
             {
-                //echo "Save Ok<br/>";
+                //echo "Save Ok<br/>,password1='$password'";
 				$_SESSION['login_user']=$username;
 				$user = $_SESSION['login_user'];
-                header("location: welcome.php");
+                header("location: edit-profile.php");
             }
             else 
                 echo "Save failed<br/>";

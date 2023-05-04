@@ -61,7 +61,13 @@
 
 
 											</tr>
+											
 											<?php
+									$req = "select * from driver where status=1 and username='$user'";
+									$query = mysqli_query($conn,$req);
+									while($fetch=mysqli_fetch_assoc($query))
+									{		
+											if($fetch['status']==1){
 $req = "select * from orders where status1='new'";
 $query = mysqli_query($conn,$req);
 while($fetch=mysqli_fetch_assoc($query))
@@ -122,7 +128,7 @@ while($fetch=mysqli_fetch_assoc($query))
 
     }*/
     
-?>	<?php }mysqli_close($conn);
+?>	<?php }}}mysqli_close($conn);
 											
 											?>
 										</thead>

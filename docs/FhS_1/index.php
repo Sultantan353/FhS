@@ -38,7 +38,7 @@
 						  <img src="images/qq.png">
 					</div>
 					<div class="text list_1_of_2">
-						  <h3>تسجيل دخول السائقين</h3>
+						  <h3>تسجيل دخول مقدمين الخدمة</h3>
 						
 						  <div class="button"><span><a href="driverlogin.php">تسجيل الدخول</a></span></div>
 					</div>

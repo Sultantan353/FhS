@@ -7,7 +7,7 @@
 ?>
 <html lang="en">
 	<head>
-		<title>جميع السائقين</title>
+		<title>جميع مقدمين الخدمة</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -31,7 +31,7 @@
 							<form action="" method="post">
 							<div class="row">
 								<div>
-									<h1 class="mainTitle" style="text-align: center;">جميع السائقين</h1><h2 style="text-align: right;"><a href = "adminwelcome.php">back</a></h2>
+									<h1 class="mainTitle" style="text-align: center;">جميع مقدمين الخدمة</h1><h2 style="text-align: right;"><a href = "adminwelcome.php">back</a></h2>
 																	</div>
 								
 							</div>

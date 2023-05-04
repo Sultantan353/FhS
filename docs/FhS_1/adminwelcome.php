@@ -101,11 +101,11 @@ h1{
 							<div class="panel-body">
 								<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i
 										class="fa fa-paperclip fa-stack-1x fa-inverse"></i> </span>
-								<h2 class="StepTitle">سجلات السائقين</h2>
+								<h2 class="StepTitle">سجلات مقدمين الخدمة</h2>
 
 								<p class="cl-effect-1">
 									<a href="manage-drivers-b.php">
-										جميع السائقين
+										جميع مقدمين الخدمة
 									</a>
 								</p>
 							</div>
