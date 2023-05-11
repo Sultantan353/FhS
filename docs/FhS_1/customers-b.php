@@ -31,7 +31,7 @@
 						<section id="page-title">
 							<div class="row">
 								<div>
-									<h1 class="mainTitle" style="text-align: center;">جميع العملاء</h1><h2 style="text-align: right;"><a href = "adminwelcome.php">back</a></h2>
+									<h1 class="mainTitle" style="text-align: center;">جميع العملاء</h1><h2 style="text-align: right;"><a href = "adminwelcome.php">رجع إلى الخلف</a></h2>
 																	</div>
 								
 							</div>
