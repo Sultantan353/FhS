@@ -27,7 +27,7 @@
 		<div class="wrap-content container" style="width: 500px;">
 			<section id="page-title">
 				<div>
-					<h1 class="mainTitle" style="text-align: center;">إنشاء حساب جديد</h1><h2 style="text-align: right;"><a href = "login.php">BACK</a></h2>
+					<h1 class="mainTitle" style="text-align: center;">إنشاء حساب جديد</h1><h2 style="text-align: right;"><a href = "login.php">رجع إلى الخلف</a></h2>
 				</div>
 			</section>
 			<div>
