@@ -33,7 +33,7 @@
 				<div class="wrap-content container" style="width: max-content;">
 				<section id="page-title">
 				<div>
-					<h1 class="mainTitle" style="text-align: center;"> طلب جديد</h1><h2 style="text-align: right;"><a href = "welcome.php">BACK</a></h2>
+					<h1 class="mainTitle" style="text-align: center;"> طلب جديد</h1><h2 style="text-align: right;"><a href = "welcome.php">رجع إلى الخلف</a></h2>
 				</div>
 			</section>
 					<div class="container-fluid container-fullw bg-white">
