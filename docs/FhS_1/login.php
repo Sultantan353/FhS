@@ -51,7 +51,7 @@
 		<div class="wrap-content container" style="width: 500px;">
 			<section id="page-title">
 				<div>
-					<h1 class="mainTitle" style="text-align: center;">تسجيل الدخول</h1><h2 style="text-align: right;"><a href = "index.php">BACK</a></h2>
+					<h1 class="mainTitle" style="text-align: center;">تسجيل الدخول</h1><h2 style="text-align: right;"><a href = "index.php">رجع إلى الخلف</a></h2>
 				</div>
 			</section>
 			<div>
@@ -89,7 +89,7 @@
 											
 											
 
-											<input type="submit" name="submit" value="تسجيل الدخول" class="btn btn-o btn-primary"><h6 style="text-align: center;"><a   href="reg.php">New user</a></h6>
+											<input type="submit" name="submit" value="تسجيل الدخول" class="btn btn-o btn-primary"><h6 style="text-align: center;"><a   href="reg.php">مستخدم جديد</a></h6>
 
 										</form>
 										
