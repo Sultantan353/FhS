@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <?php
-   include('session.php');
-   $user = $_SESSION['login_user'];
+   include('welcome.php');
+
+   //include('session.php');
+   //$user = $_SESSION['login_user'];
 ?>
 <html lang="en">
 	<head>
@@ -28,7 +30,7 @@
 						<section id="page-title">
 							<div class="row">
 								<div>
-									<h1 class="mainTitle" style="text-align: center;">طلباتي</h1><h2 style="text-align: right;"><a href = "welcome.php">رجع إلى الخلف</a></h2>
+									<h1 class="mainTitle" style="text-align: center;">طلباتي</h1><h2 style="text-align: right;"><a href = "welcome.php">BACK</a></h2>
 																	
 						</section>
 						<!-- end: PAGE TITLE -->

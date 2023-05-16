@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <?php
-  //include('welcome.php');
-
-    include('session.php');
+   include('session.php');
    $user = $_SESSION['login_user'];
 ?>
 <html lang="en">
 
 <head>
 	<title>طلب جديد</title>
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 	<link
 		href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic"
@@ -128,23 +125,8 @@ $query = mysqli_query($conn,$req);*/
             VALUES(0,'new','$user','$servic','$car','$numcar','$city','$phone')";
             $result = mysqli_query($conn, $sql);
             if ($result == TRUE) 
-            { 
-				
-				?>
-				<script>
-				swal({
-					title: "تم إنشاء الطلب بنجاح",
-					text: "يمكنك مشاهدة تفاصيل الطلب في قائمة طلباتي",
-					icon: "success",
-				  });
-				  
-				  </script>
-				    
-
-<?php //<meta http-equiv="refresh" content="0;url=appointment-history.php" />
-   //include('welcome.php');<script></script>window.open('appointment-history.php');
-
-              // header("location: appointment-history.php");
+            {
+                header("location: pop.php");
                // echo "تم انشاء الطلب<br/>";
             }
             else 

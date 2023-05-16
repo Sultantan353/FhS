@@ -71,7 +71,7 @@ h1{
 				<div class="row">
 					<div>
 						<h1 style="text-align: right;"><b><?php echo $user;?></b></h1>
-						<h1>لوحة تحكم مقدم الخدمة<h2 style="text-align: right;"><a href = "driverlogout.php">تسجيل الخروج</a></h2></h1>
+						<h1>لوحة تحكم مقدم الخدمة<h2 style="text-align: right;"><a href = "driverlogout.php">Sign Out</a></h2></h1>
 
 					</div>
 
