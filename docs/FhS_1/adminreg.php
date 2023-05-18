@@ -85,7 +85,7 @@ h1{
         else
         {
             $sql = "INSERT INTO login(username,password1,email,role)
-            VALUES('$username','$password','$email','9')";
+            VALUES('$username','$password','$email','3')";
             $result = mysqli_query($conn, $sql);
             if ($result == TRUE) 
             {
