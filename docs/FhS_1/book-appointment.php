@@ -4,11 +4,16 @@
 
     include('session.php');
    $user = $_SESSION['login_user'];
+
 ?>
-<html lang="en">
+<html lang="en"  dir="rtl">
 
 <head>
 	<title>طلب جديد</title>
+
+	<link rel="stylesheet" type="text/css" href="scc.css"  media="all" />
+  <link rel="stylesheet" type="text/css" href="css/style.css"  media="all" />
+
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 	<link
@@ -30,13 +35,34 @@
 </head>
 
 <body>
-	<div id="app">
-		<div class="app-content">
+<div class="header" style="background-color: #1e2530;padding: 10px 0px 0px 0px;">
+				<div class="wrap">
+				<!--start-logo-->
+				<div class="logo">
+					<a href="index.html" style="font-size: 30px;color:white">الفحص الدوري</a>
+				</div>
+				<!--end-logo-->
+				<!--start-top-nav-->
+				<div class="top-nav">
+				<ul>
+						<li class=""><a href="welcome.php" style="	padding: 20px;">حسابي</a></li>
+
+						<li><a href = "logout.php" style="	padding: 20px;">تسجيل خروج</a></li>
+					</ul>						
+				</div>
+				<div class="clear"> </div>
+				<!--end-top-nav-->
+			</div>
+			<!--end-header-->
+		</div><hr style="background-color:#3391E7;height:15px;margin:10px 0px">
+    <br><br>
+	<div id="app" >
+		<div class="app-content" >
 			<div>
-				<div class="wrap-content container" style="width: max-content;">
+				<div  class="wrap-content container" style="width: max-content;">
 				<section id="page-title">
 				<div>
-					<h1 class="mainTitle" style="text-align: center;"> طلب جديد</h1><h2 style="text-align: right;"><a href = "welcome.php">BACK</a></h2>
+					<h1 class="mainTitle" style="text-align: center;"> طلب جديد</h1>
 				</div>
 			</section>
 					<div class="container-fluid container-fullw bg-white">
@@ -46,23 +72,23 @@
 								<div class="row margin-top-30">
 									<div class="col-lg-8 col-md-12">
 										<div class="panel panel-white" style="width: 450px;">
-											<div class="panel-heading">
+											<div class="panel-heading" dir="rtl">
 												<h5 class="panel-title">طلب جديد</h5>
 											</div>
-											<div class="panel-body">
+											<div class="panel-body" dir="rtl">
 												<form action="" method="post">
 
 
 
-													<div class="form-group">
+													<div class="form-group" >
 														<label for="DoctorSpecialization">
 															إختر الخدمة 
 														</label>
 														<select required="required" class="form-control"
 															onChange="getdoctor(this.value);" required="required" name="servic">
 															<option value="">قائمة الخدمات</option>
-															<option value="Periodic inspection service">Periodic inspection service</option>
-															<option value="Periodic inspection and maintenance service">Periodic inspection and maintenance service</option>
+															<option value="خدمة الفحص الدوري">خدمة الفحص الدوري</option>
+															<option value="خدمة الفحص الدوري والصيانة">خدمة الفحص الدوري والصيانة</option>
 														</select>
 													</div>
 
@@ -108,51 +134,11 @@
 														
 
 														
-												
-													<input type="submit" name="a" class="btn btn-o btn-primary">
+													<button class="btn btn-o btn-primary" name="a" type="submit" formaction="statusbook.php?st=1">إرسال الطلب</button>
+
+													<!--<input type="submit" name="a" class="btn btn-o btn-primary">-->
 												</form>
-												<?php
 
-if(isset($_POST['a']))
-    {
-        $servic = $_POST['servic'];
-        $car = $_POST['car'];
-        $numcar = $_POST['numcar'];
-        $city = $_POST['city'];
-        $phone = $_POST['phone'];
-        
-  /*      $req = "INSERT INTO orders(servic,car,numcar,city,phone)
-		VALUES('$servic','$car','$numcar','$city','$phone')";
-$query = mysqli_query($conn,$req);*/
-            $sql = "INSERT INTO orders(status,status1,username,servic,car,numcar,city,phone)
-            VALUES(0,'new','$user','$servic','$car','$numcar','$city','$phone')";
-            $result = mysqli_query($conn, $sql);
-            if ($result == TRUE) 
-            { 
-				
-				?>
-				<script>
-				swal({
-					title: "تم إنشاء الطلب بنجاح",
-					text: "يمكنك مشاهدة تفاصيل الطلب في قائمة طلباتي",
-					icon: "success",
-				  });
-				  
-				  </script>
-				    
-
-<?php //<meta http-equiv="refresh" content="0;url=appointment-history.php" />
-   //include('welcome.php');<script></script>window.open('appointment-history.php');
-
-              // header("location: appointment-history.php");
-               // echo "تم انشاء الطلب<br/>";
-            }
-            else 
-                echo "خطأ<br/>";
-        }
-    
-    mysqli_close($conn);
-?>
 
 											</div>
 										</div>
@@ -170,7 +156,38 @@ $query = mysqli_query($conn,$req);*/
 		</div>
 		
 	</div>
-	
+	<hr style="background-color:#3391E7;height:15px;margin:150px 0px 10px 0px;">
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span>Copyright © 2019, All Right Reserved Seobin</span>
+                    </div>
+                    <!-- End Col -->
+                    <div class="col-md-6">
+                        <div class="copyright-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">Terms</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                </div>
+                <!-- End Row -->
+            </div>
+            <!-- End Copyright Container -->
+        </div>
 </body>
 
 </html>

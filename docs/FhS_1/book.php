@@ -40,6 +40,11 @@ h1{
 <html lang="en">
 
 <head>
+	
+
+
+
+	</style>
 	<title>لوحة تحكم العميل</title>
   <link rel="stylesheet" type="text/css" href="scc.css"  media="all" />
   <link rel="stylesheet" type="text/css" href="css/style.css"  media="all" />
@@ -76,6 +81,7 @@ h1{
 				<!--start-top-nav-->
 				<div class="top-nav">
 					<ul>
+						<li class=""><a href="index.php" style="	padding: 20px;">الرئيسية</a></li>
 						<li class=""><a href="welcome.php" style="	padding: 20px;">حسابي</a></li>
 
 						<li><a href = "logout.php" style="	padding: 20px;">تسجيل خروج</a></li>
@@ -91,8 +97,20 @@ h1{
 
 	
 	<div style="width: 100%;display: flex;background-color:;margin:0px 0px 0px 0px;">
+	
 	<div style="width: 80%; display: flex;float:left;background-color:;">
+	<?php
+$a=0;
+while($a<=10)
+{?>
+	<div style="width: 80%; display: flex;background-color:red;">
+	knjk
+	</div>
 
+<?php
+$a++;
+ } ?>
+    
 </div>
 <div style="text-align: right;
     font-size: 30px;
@@ -114,8 +132,8 @@ h1{
 								<h2 class="StepTitle">حسابي</h2>
 
 								<p class="links cl-effect-1">
-									<a href="edit-profile.php?st=0">
-										بياناتي
+									<a href="edit-profile.php">
+										معلومات الحساب
 									</a>
 								</p>
 							</div>
@@ -129,12 +147,12 @@ h1{
 								<h2 class="StepTitle">طلباتي</h2>
 
 								<p class="cl-effect-1">
-									<a href="appointment-history.php?st=0">
-										جميع الطلبات
-									</a>
-									<!--<a href="book.php?st=0">
+									<!--<a href="appointment-history.php?st=0">
 										جميع الطلبات
 									</a>-->
+									<a href="book.php?st=0">
+										جميع الطلبات
+									</a>
 								</p>
 							</div>
 						</div>
