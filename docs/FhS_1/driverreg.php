@@ -120,22 +120,22 @@
         $username = $_POST['username'];
         $city = $_POST['city'];
         $age = $_POST['age'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']);
         $email = $_POST['email'];
         
-        $sqlcheck = "SELECT username FROM driver WHERE username = '$username'";
+        $sqlcheck = "SELECT username FROM login WHERE username = '$username'";
         $resultcheck = mysqli_query($conn, $sqlcheck); 
         if (mysqli_num_rows($resultcheck) > 0)
             echo ("user name already taken");
         else
         {
-            $sql = "INSERT INTO driver(status,status1,username,age,city,password1,email)
-            VALUES(0,'Unauthorized','$username','$age','$city','$password','$email')";
+            $sql = "INSERT INTO login(status,status1,username,age,city,password1,email,role,isDriver)
+            VALUES(0,'Unauthorized','$username','$age','$city','$password','$email',2,1)";
             $result = mysqli_query($conn, $sql);
             if ($result == TRUE) 
             {
                 echo "تم اضافة سائق<br/>";
-                header("location: driverlogin.php");
+                header("location: login.php");
             }
             else 
                 echo "Save failed<br/>";

@@ -66,7 +66,7 @@
 										<tbody>
 										<?php
 
-$req = "select * from driver";
+$req = "select * from login WHERE isDriver='1'";
 $query = mysqli_query($conn,$req);
 while($fetch=mysqli_fetch_array($query))
 {

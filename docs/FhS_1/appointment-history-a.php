@@ -63,7 +63,7 @@
 											</tr>
 											
 											<?php
-									$req = "select * from driver where status=1 and username='$user'";
+									$req = "select * from login where status=1 and username='$user'";
 									$query = mysqli_query($conn,$req);
 									while($fetch=mysqli_fetch_assoc($query))
 									{		

@@ -48,7 +48,7 @@
 									<div class="panel-body">
 									<?php
 
-$req = "select * from driver where username='$user'";
+$req = "select * from login where username='$user'";
 $query = mysqli_query($conn,$req);
 while($fetch=mysqli_fetch_assoc($query))
 {

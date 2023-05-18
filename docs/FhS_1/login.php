@@ -5,24 +5,33 @@
     if(isset($_POST['submit']))
     {
         $myusername = $_POST['username'];
-        $mypassword =$_POST['password']; 
+        $mypassword =md5($_POST['password']); 
         
-        $sql = "SELECT username,password1 FROM login WHERE 
+        $sql = "SELECT username,password1,role FROM login WHERE 
         username = '$myusername' and password1 = '$mypassword'";
         $result=mysqli_query($conn, $sql);
+		$row = mysqli_fetch_array($result);
         if (mysqli_num_rows($result)>0)
         {
-			/*echo '<script>
-				swal({
-					title: "Success",
-					text: "Data insert",
-					icon: "success",
-				});
-			</script>';*/
-            $_SESSION['login_user'] = $myusername;
-            header("location: welcome.php");
+			if ($row["role"]==1){
+
+				$_SESSION['login_user'] = $myusername;
+            	header("location: adminwelcome.php");	
+			}
+			else if ($row["role"]==2) {
+				$_SESSION['login_user'] = $myusername;
+				header("location: driverwelcome.php");
+			}
+			else if ($row["role"]==3) {
+				$_SESSION['login_user'] = $myusername;
+				header("location: welcome.php");
+			}
+
+            // $_SESSION['login_user'] = $myusername;
+            // header("location: welcome.php"); 
         }
         else 
+            $error =  "Your Login Name or Password is invalid";
             $error =  "Your Login Name or Password is invalid";
         
     mysqli_close($conn);

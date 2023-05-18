@@ -176,7 +176,7 @@
         $city = $_POST['city'];
         $age = $_POST['age'];
         $email = $_POST['email'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']);
         
         $sqlcheck = "SELECT username FROM login WHERE username = '$username'";
         $resultcheck = mysqli_query($conn, $sqlcheck); 
@@ -184,8 +184,8 @@
             echo ("user name already taken");
         else
         {
-            $sql = "INSERT INTO login(username,city,age,password1,email)
-            VALUES('$username','$city','$age','$password','$email')";
+            $sql = "INSERT INTO login(username,city,age,password1,email,role)
+            VALUES('$username','$city','$age','$password','$email',3)";
             $result = mysqli_query($conn, $sql);
             if ($result == TRUE) 
             {

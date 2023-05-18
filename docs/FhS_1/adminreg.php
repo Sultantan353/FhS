@@ -75,22 +75,22 @@ h1{
     if(isset($_POST['register']))
     {
         $username = $_POST['username'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']);
         $email = $_POST['email'];
         
-        $sqlcheck = "SELECT username FROM admin WHERE username = '$username'";
+        $sqlcheck = "SELECT username FROM login WHERE username = '$username'";
         $resultcheck = mysqli_query($conn, $sqlcheck); 
         if (mysqli_num_rows($resultcheck) > 0)
             echo ("user name already taken");
         else
         {
-            $sql = "INSERT INTO admin(username,password1,email)
-            VALUES('$username','$password','$email')";
+            $sql = "INSERT INTO login(username,password1,email,role)
+            VALUES('$username','$password','$email','9')";
             $result = mysqli_query($conn, $sql);
             if ($result == TRUE) 
             {
                 //echo "Save Ok<br/>";
-                header("location: adminlogin.php");
+                header("location: login.php");
             }
             else 
                 echo "Save failed<br/>";
