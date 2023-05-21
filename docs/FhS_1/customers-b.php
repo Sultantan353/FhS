@@ -59,7 +59,7 @@
 										<tbody>
 										<?php
 
-$req = "select * from login";
+$req = "select * from login where role='3'";
 $query = mysqli_query($conn,$req);
 while($fetch=mysqli_fetch_assoc($query))
 {

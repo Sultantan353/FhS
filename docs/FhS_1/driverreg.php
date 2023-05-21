@@ -129,8 +129,8 @@
             echo ("user name already taken");
         else
         {
-            $sql = "INSERT INTO login(status,status1,username,age,city,password1,email,role,isDriver)
-            VALUES(0,'Unauthorized','$username','$age','$city','$password','$email',2,1)";
+            $sql = "INSERT INTO login(status,status1,username,age,city,password1,email,role)
+            VALUES(0,'Unauthorized','$username','$age','$city','$password','$email',2)";
             $result = mysqli_query($conn, $sql);
             if ($result == TRUE) 
             {

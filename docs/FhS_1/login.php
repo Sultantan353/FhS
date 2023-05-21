@@ -6,7 +6,7 @@
     {
         $myusername = $_POST['username'];
         $mypassword =md5($_POST['password']); 
-        
+        // 1 is the admin role, 2 is the driver role , 3 is for the normal user role. 
         $sql = "SELECT username,password1,role FROM login WHERE 
         username = '$myusername' and password1 = '$mypassword'";
         $result=mysqli_query($conn, $sql);

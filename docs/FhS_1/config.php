@@ -20,7 +20,6 @@
           email VARCHAR(100) NOT NULL UNIQUE,
           password1 CHAR(32) NOT NULL,    
           role INT(1) NOT NULL,
-          isDriver INT(1) NOT NULL,
           created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
           updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
       );";
