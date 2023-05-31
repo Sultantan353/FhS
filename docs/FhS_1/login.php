@@ -134,10 +134,17 @@
 
 											<input type="submit" name="submit" value="تسجيل الدخول" class="btn btn-o btn-primary">
 											<input type="submit" name="reg" value="إنشاء حساب جديد" class="btn btn-o btn-primary">
+											<input type="submit" name="driverreg" value="إنشاء حساب جديد" class="btn btn-o btn-primary">
 											<?php if (isset($_POST['reg'])) 
             {
                 
                 header("location: reg.php");
+            } 
+			?> 
+			<?php if (isset($_POST['driverreg'])) 
+            {
+                
+                header("location: driverreg.php");
             } 
 			?> 
 			<!--<a   href="reg.php">إنشاء حساب جديد</a>-->

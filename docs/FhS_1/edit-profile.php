@@ -9,6 +9,8 @@
 <html lang="en">
 
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>معلومات الحساب</title>
 	<link rel="stylesheet" type="text/css" href="scc.css"  media="all" />
   <link rel="stylesheet" type="text/css" href="css/style.css"  media="all" />
@@ -52,27 +54,6 @@ if($st==1){?>
 <?php header("Refresh:5; url=edit-profile.php?st=0");
 };
 ?>
-<div class="header" style="background-color: #1e2530;padding: 10px 0px 0px 0px;
-">
-				<div class="wrap">
-				<!--start-logo-->
-				<div class="logo">
-					<a href="index.html" style="font-size: 30px;color:white">الفحص الدوري</a>
-				</div>
-				<!--end-logo-->
-				<!--start-top-nav-->
-				<div class="top-nav">
-					<ul>
-						<li class=""><a href="welcome.php" style="	padding: 20px;">حسابي</a></li>
-
-						<li><a href = "logout.php" style="	padding: 20px;">تسجيل خروج</a></li>
-					</ul>					
-				</div>
-				<div class="clear"> </div>
-				<!--end-top-nav-->
-			</div>
-			<!--end-header-->
-		</div><hr style="background-color:#3391E7;height:15px;margin:10px 0px 0px 0px;">
 
 	<div>
 		<div class="wrap-content container" style="width: 500px;">
@@ -165,38 +146,7 @@ while($fetch=mysqli_fetch_assoc($query))
 		</div>
 	</div>
 	</div>
-	<hr style="background-color:#3391E7;height:15px;margin:150px 0px 10px 0px;">
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <span>Copyright © 2019, All Right Reserved Seobin</span>
-                    </div>
-                    <!-- End Col -->
-                    <div class="col-md-6">
-                        <div class="copyright-menu">
-                            <ul>
-                                <li>
-                                    <a href="#">Home</a>
-                                </li>
-                                <li>
-                                    <a href="#">Terms</a>
-                                </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
-                                </li>
-                                <li>
-                                    <a href="#">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- End col -->
-                </div>
-                <!-- End Row -->
-            </div>
-            <!-- End Copyright Container -->
-        </div>
+	
 </body>
 
 </html>

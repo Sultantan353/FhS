@@ -26,9 +26,12 @@ h1{
   border: #2980b9 4px solid; 
 }
 
+
         </style>
     </head>
- <!--  <body>
+ <!-- .embed-responsive iframe {
+  background-color:#666;
+} <body>
       <div class="box">
       <h1>Welcome</h1> 
       <h2><a href = "logout.php">Sign Out</a></h2>
@@ -40,6 +43,8 @@ h1{
 <html lang="en">
 
 <head>
+<!---->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>لوحة تحكم العميل</title>
   <link rel="stylesheet" type="text/css" href="scc.css"  media="all" />
   <link rel="stylesheet" type="text/css" href="css/style.css"  media="all" />
@@ -61,22 +66,30 @@ h1{
 	<link rel="stylesheet" href="assets/css/plugins.css">
 	<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
 	
-
 </head>
 
 <body>
 <div class="header" style="background-color: #1e2530;padding: 10px 0px 0px 0px;
 ">
 				<div class="wrap">
+					
 				<!--start-logo-->
 				<div class="logo">
-					<a href="index.html" style="font-size: 30px;color:white">الفحص الدوري</a>
+
+					<a href="index.html" style="font-size: 30px;color:white; font-family:'Sofia', sans-serif;" >الفحص الدوري</a>
+				
 				</div>
 				<!--end-logo-->
 				<!--start-top-nav-->
 				<div class="top-nav">
 					<ul>
-						<li class=""><a href="welcome.php" style="	padding: 20px;">حسابي</a></li>
+					<li class=""><a href="welcome.php" style="	padding: 20px;">الرئيسية</a></li>
+
+					<li class=""><a href="edit-profile.php?st=0" target="iframe_a" style="	padding: 20px;">معلومات الحساب</a></li>
+
+					<li class=""><a href="appointment-history.php?st=0" target="iframe_a" style="	padding: 20px;">طلباتي</a></li>
+
+						<li class=""><a href="book-appointment.php" target="iframe_a" style="	padding: 20px;">طلب جديد</a></li>
 
 						<li><a href = "logout.php" style="	padding: 20px;">تسجيل خروج</a></li>
 					</ul>					
@@ -92,7 +105,7 @@ h1{
 	
 	<div style="width: 100%;display: flex;background-color:;margin:0px 0px 0px 0px;">
 	<div style="width: 80%; display: flex;float:left;background-color:;">
-
+	<iframe name="iframe_a" class="embed-responsive-item" style="width: 100%;display: flex;" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <div style="text-align: right;
     font-size: 30px;
@@ -114,7 +127,7 @@ h1{
 								<h2 class="StepTitle">حسابي</h2>
 
 								<p class="links cl-effect-1">
-									<a href="edit-profile.php?st=0">
+									<a href="edit-profile.php?st=0" target="iframe_a">
 										بياناتي
 									</a>
 								</p>
@@ -129,7 +142,7 @@ h1{
 								<h2 class="StepTitle">طلباتي</h2>
 
 								<p class="cl-effect-1">
-									<a href="appointment-history.php?st=0">
+									<a href="appointment-history.php?st=0" target="iframe_a">
 										جميع الطلبات
 									</a>
 									<!--<a href="book.php?st=0">
@@ -147,7 +160,7 @@ h1{
 								<h2 class="StepTitle">طلب جديد</h2>
 
 								<p class="links cl-effect-1">
-									<a href="book-appointment.php">
+									<a href="book-appointment.php" target="iframe_a">
 										طلب جديد
 									</a>
 								</p>
@@ -168,24 +181,28 @@ h1{
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <span>Copyright © 2019, All Right Reserved Seobin</span>
+                        <span>حقوق الطبع والنشر © 2023 ، جميع الحقوق محفوظة</span>
                     </div>
                     <!-- End Col -->
                     <div class="col-md-6">
                         <div class="copyright-menu">
                             <ul>
                                 <li>
-                                    <a href="#">Home</a>
+                                    <a href="welcome.php">الرئيسية</a>
                                 </li>
                                 <li>
-                                    <a href="#">Terms</a>
+                                    <a href="edit-profile.php?st=0" target="iframe_a">معلومات الحساب</a>
                                 </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
+								<li>
+                                    <a href="appointment-history.php?st=0" target="iframe_a">طلباتي</a>
                                 </li>
-                                <li>
-                                    <a href="#">Contact</a>
+								<li>
+                                    <a href="book-appointment.php" target="iframe_a">طلب جديد</a>
                                 </li>
+								<li>
+                                    <a href="logout.php">تسجيل خروج</a>
+                                </li>
+                               
                             </ul>
                         </div>
                     </div>

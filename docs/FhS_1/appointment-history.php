@@ -31,28 +31,7 @@
 		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
 	</head>
 	<body>
-	<div class="header" style="background-color: #1e2530;padding: 10px 0px 0px 0px;
-">
-				<div class="wrap">
-				<!--start-logo-->
-				<div class="logo">
-					<a href="index.html" style="font-size: 30px;color:white">الفحص الدوري</a>
-				</div>
-				<!--end-logo-->
-				<!--start-top-nav-->
-				<div class="top-nav">
-					<ul>
-						<li class=""><a href="welcome.php" style="	padding: 20px;">حسابي</a></li>
-
-						<li><a href = "logout.php" style="	padding: 20px;">تسجيل خروج</a></li>
-					</ul>					
-				</div>
-				<div class="clear"> </div>
-				<!--end-top-nav-->
-			</div>
-			<!--end-header-->
-		</div><hr style="background-color:#3391E7;height:15px;margin:10px 0px 0px 0px;">
-
+	
 <?php 
 if($st==1){?>
 <script>
@@ -125,7 +104,7 @@ while($fetch=mysqli_fetch_assoc($query))
 											</tr>
 											<?php } ?>
 										</thead>
-										<tbody>
+</table>
 											
 
 					</div>

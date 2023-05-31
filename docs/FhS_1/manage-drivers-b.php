@@ -31,7 +31,7 @@
 							<form action="" method="post">
 							<div class="row">
 								<div>
-									<h1 class="mainTitle" style="text-align: center;">جميع مقدمين الخدمة</h1><h2 style="text-align: right;"><a href = "adminwelcome.php">back</a></h2>
+									<h1 class="mainTitle" style="text-align: center;">جميع مقدمين الخدمة</h1>
 																	</div>
 								
 							</div>

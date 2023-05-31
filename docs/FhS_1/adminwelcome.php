@@ -1,5 +1,5 @@
 <?php
-   include('adminsession.php');
+   include('session.php');
    $user = $_SESSION['login_user'];
 ?>
 <html>
@@ -26,9 +26,12 @@ h1{
   border: #2980b9 4px solid; 
 }
 
+
         </style>
     </head>
- <!--  <body>
+ <!-- .embed-responsive iframe {
+  background-color:#666;
+} <body>
       <div class="box">
       <h1>Welcome</h1> 
       <h2><a href = "logout.php">Sign Out</a></h2>
@@ -40,7 +43,11 @@ h1{
 <html lang="en">
 
 <head>
-	<title>لوحة تحكم المسؤول</title>
+<!---->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>لوحة تحكم العميل</title>
+  <link rel="stylesheet" type="text/css" href="scc.css"  media="all" />
+  <link rel="stylesheet" type="text/css" href="css/style.css"  media="all" />
 
 	<link
 		href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic"
@@ -58,45 +65,76 @@ h1{
 	<link rel="stylesheet" href="assets/css/styles.css">
 	<link rel="stylesheet" href="assets/css/plugins.css">
 	<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
-
-
+	
 </head>
 
 <body>
+<div class="header" style="background-color: #1e2530;padding: 10px 0px 0px 0px;
+">
+				<div class="wrap">
+					
+				<!--start-logo-->
+				<div class="logo">
 
-
-
-		<div class="wrap-content container">
-			<section id="page-title">
-				<div class="row">
-					<div>
-					<h1 style="text-align: right;"><b><?php echo $user;?></b></h1>
-						<h1>لوحة تحكم المسؤول<h2 style="text-align: right;"><a href = "adminlogout.php">Sign Out</a></h2></h1>
-
-					</div>
-
+					<a href="index.html" style="font-size: 30px;color:white; font-family:'Sofia', sans-serif;" >الفحص الدوري</a>
+				
 				</div>
-			</section>
+				<!--end-logo-->
+				<!--start-top-nav-->
+				<div class="top-nav">
+					<ul>
+					<li class=""><a href="adminwelcome.php" style="	padding: 20px;">الرئيسية</a></li>
+
+					<li class=""><a href="customers-b" target="iframe_a" style="	padding: 20px;">سجلات العملاء</a></li>
+
+					<li class=""><a href="manage-drivers-b.php" target="iframe_a" style="	padding: 20px;">سجلات مقدمين الخدمة</a></li>
+
+						<li class=""><a href="orders.php" target="iframe_a" style="	padding: 20px;">جميع الطلبات</a></li>
+
+						<li><a href = "logout.php" style="	padding: 20px;">تسجيل خروج</a></li>
+					</ul>					
+				</div>
+				<div class="clear"> </div>
+				<!--end-top-nav-->
+			</div>
+			<!--end-header-->
+		</div><hr style="background-color:#3391E7;height:15px;margin:10px 0px 0px 0px;">
+    
 
 
-			<div class="container-fluid container-fullw bg-white">
-				<div class="row">
-					<div class="col-sm-4">
+	
+	<div style="width: 100%;display: flex;background-color:;margin:0px 0px 0px 0px;">
+	<div style="width: 80%; display: flex;float:left;background-color:;">
+	<iframe name="iframe_a" class="embed-responsive-item" style="width: 100%;display: flex;" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div style="text-align: right;
+    font-size: 30px;
+	background-color:#1E2530;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    height: ;
+    width:20%;">
+<div>
+			
+					<div class="col-sm-4" style="width:100%;">
 						<div class="panel panel-white no-radius text-center">
 							<div class="panel-body">
-								<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i
-										class="fa fa-smile-o fa-stack-1x fa-inverse"></i> </span>
+								<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary" ></i> <i
+										class="fa fa-smile-o fa-stack-1x fa-inverse" ></i> </span>
 								<h2 class="StepTitle">سجلات العملاء</h2>
 
 								<p class="links cl-effect-1">
-									<a href="customers-b.php">
-										جميع العملاء
+									<a href="customers-b" target="iframe_a">
+										 العملاء
 									</a>
 								</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-4" style="width:100%;">
 						<div class="panel panel-white no-radius text-center">
 							<div class="panel-body">
 								<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i
@@ -104,23 +142,26 @@ h1{
 								<h2 class="StepTitle">سجلات مقدمين الخدمة</h2>
 
 								<p class="cl-effect-1">
-									<a href="manage-drivers-b.php">
-										جميع مقدمين الخدمة
+									<a href="manage-drivers-b.php" target="iframe_a">
+										 مقدمين الخدمة 
 									</a>
+									<!--<a href="book.php?st=0">
+										جميع الطلبات
+									</a>-->
 								</p>
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-4" style="width:100%;">
 						<div class="panel panel-white no-radius text-center">
 							<div class="panel-body">
 								<span class="fa-stack fa-2x"> <i class="fa fa-square fa-stack-2x text-primary"></i> <i
 										class="fa fa-terminal fa-stack-1x fa-inverse"></i> </span>
-								<h2 class="StepTitle">سجلات الطلبات</h2>
+								<h2 class="StepTitle">جميع الطلبات</h2>
 
 								<p class="links cl-effect-1">
-									<a href="orders.php">
-										جميع الطلبات 
+									<a href="orders.php" target="iframe_a">
+										 الطلبات  
 									</a>
 								</p>
 							</div>
@@ -129,8 +170,48 @@ h1{
 				</div>
 			</div>
 		</div>
-	</div>
-	</div>
+</div>
+
+</div>
+
+
+	
+	<hr style="background-color:#3391E7;height:15px;margin:0px 0px 10px 0px;">
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span>حقوق الطبع والنشر © 2023 ، جميع الحقوق محفوظة</span>
+                    </div>
+                    <!-- End Col -->
+                    <div class="col-md-6">
+                        <div class="copyright-menu">
+                            <ul>
+                                <li>
+                                    <a href="adminwelcome.php">الرئيسية</a>
+                                </li>
+                                <li>
+                                    <a href="customers-b.php" target="iframe_a">سجلات العملاء</a>
+                                </li>
+								<li>
+                                    <a href="manage-drivers-b.php" target="iframe_a">سجلات مقدمين الخدمة</a>
+                                </li>
+								<li>
+                                    <a href="orders.php" target="iframe_a">سجلات الطلبات</a>
+                                </li>
+								<li>
+                                    <a href="logout.php">تسجيل خروج</a>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                </div>
+                <!-- End Row -->
+            </div>
+            <!-- End Copyright Container -->
+        </div>
 
 </body>
 

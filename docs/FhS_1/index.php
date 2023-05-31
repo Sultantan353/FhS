@@ -16,7 +16,36 @@
 
 		<link rel="stylesheet" type="text/css" href="css/style.css"  media="all" />
 				  <meta charset="utf-8">
-          
+          <style>
+            .card {
+  padding: 16px;
+  margin: 24px;
+  border-radius: 2px;
+  background-color: #fff;
+  color: rgba(0,0,0,0.87);
+  box-shadow: 
+    0 2px 2px 0 rgba(0, 0, 0, 0.14), 
+    0 1px 5px 0 rgba(0, 0, 0, 0.12), 
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  
+  .card-title { 
+    text-align:right;   
+    padding: 24px 16px 8px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+  
+  p {
+    text-align:right;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0.010em;
+    line-height: 1.6em;
+    padding: 0 16px;
+  }  
+}
+            </style>
 	</head>
 	<body>
 	
@@ -64,11 +93,38 @@
 </div>-->
 
                                 
-<div style="
+
+                                 
+                                    
+                                    
+    
+      <div style="
     padding: 0.5rem;
     display: flex;  
     width: 650px;
     margin-left: 400px;">
+                                    
+                                    <div class="hexagon-item">
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <div class="hex-item">
+                                            <div></div>
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                        <a href="driverreg.php" class="hex-content">
+                                            <span class="hex-content-inner">
+                                                <span class="icon">
+                                                    <i class="fa"><img src="images/qq.png"></i>
+                                                </span>
+                                                <span class="title" style="color:white;">إنشاء حساب مقدم خدمة</span>
+                                            </span>
+                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
+                                        </a>
+                                    </div>
                                     <div class="hexagon-item">
                                         <div class="hex-item">
                                             <div></div>
@@ -85,7 +141,7 @@
                                                 <span class="icon">
                                                     <i class="fa" ><img src="images/q.png" height="75"></i>
                                                 </span>
-                                                <span class="title" style="color:white;">العملاء</span>
+                                                <span class="title" style="color:white;">تسجيل الدخول</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
@@ -101,42 +157,63 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="driverlogin.php" class="hex-content">
-                                            <span class="hex-content-inner">
-                                                <span class="icon">
-                                                    <i class="fa"><img src="images/qq.png"></i>
-                                                </span>
-                                                <span class="title" style="color:white;">مقدمين الخدمة</span>
-                                            </span>
-                                            <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
-                                        </a>
-                                    </div>
-                                    <div class="hexagon-item">
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <div class="hex-item">
-                                            <div></div>
-                                            <div></div>
-                                            <div></div>
-                                        </div>
-                                        <a href="adminlogin.php" class="hex-content">
+                                        <a href="reg.php" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa"><img src="images/ad.png"></i>
                                                 </span>
-                                                <span class="title" style="color:white;">المسؤول</span>
+                                                <span class="title" style="color:white;">إنشاء حساب مستفيد</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>    
                                     </div>
-                                    </div>
-                                 
-                                    
-                                    
-		<center>   <img src="images/car.png" ></center>
+                                    </div><br><br>
+                                    <center>   <img src="images/car.png" style="width:80%;"></center>
+                                    <center>                            
+<div class="card" style="text-align:right;width:80%;">
+    <div class="card-title">خلفية ومحفزات  المشروع</div>
+
+    <div class="card-title">يوفر هذا المشروع حلا لمشكلة عدم توفر خدمة لمالك السيارات من القيام بعمل فحص دوري لسياراتهم، حيث توفر هذه الخدمة استلام سيارة العميل من موقعه والذهاب بها الى مركز الفحص الدوري، و عمل الصيانة اللازمة لها لاجتياز الفحص الدوري وإرجاعها لموقع العميل، و توفير بعض القطع الإستهالكية التي تعيق المركبة من إجتياز إختبار الفحص الدوري، و إمكانية عمل فحص مبدئ للمركبة مع تقرير بنتائج الفحص المبدئ ونسبة إجتياز المركبة لإختبار الفحص الدوري</div>
+
+   
+  </div>
+  <div class="card" style="text-align:right;width:80%;">
+    <div class="card-title">أهداف  المشروع</div>
+
+    <div class="card-title">1 تسهيل عملية الفحص الدوري لمالك السيارات.
+-2 توفرت خدمة الستالم سيارة العميل من موقعه وعمل 
+الفحص الدوري لها و إرجاعها اىل موقعه.
+-3 إمكانية عمل الصيانة الالزمة لسيارة العميل الجتياز 
+اختبار الفحص الدوري.
+رت -4 تعيق
+توفرتبعض القطع اإلستهالكية ال المركبة 
+إجتياز إختبار الفحص الدوري.
+ -5 توفرت خدمة الفحص
+ 
+المبدئ للمركبة مع تقرير بنتائج 
+ و
+ 
+الفحص المبدئ نسبة إجتياز المركبة إلختبار 
+الفحص الدوري</div>
+
+   
+  </div>
+  <div class="card" style="text-align:right;width:80%;">
+    <div class="card-title">النتائج المتوقعة للم رشوع</div>
+
+    <div class="card-title">برمجة موقع يوفر خدمة تسمح للعميل عمل الفحص 
+الدوري لسيارته وعمل الصيانة الالزمة الجتياز اختبار 
+موقعه.
+ 
+ 
+الفحص الدوري وهو ف
+</div>
+
+   
+  </div>
+  </center>
+  
+
  <!--   <div class="wrap">
 		   <div class="content-box"><h1 style="
 			text-align: center;

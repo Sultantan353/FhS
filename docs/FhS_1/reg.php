@@ -1,6 +1,7 @@
 <html lang="en">
 
 <head>
+	<?php ?>
 	<title>معلومات الحساب</title>
 	<link rel="stylesheet" type="text/css" href="scc.css"  media="all" />
   <link rel="stylesheet" type="text/css" href="css/style.css"  media="all" />
@@ -104,14 +105,42 @@
 											
 
 											<input type="submit" name="register" class="btn btn-o btn-primary">
-											<button class="btn btn-o btn-primary" type="submit" formaction="index.php">الرئيسية</button>
 
 
 
 
 											
 										</form>
-										
+										<?php
+    include("config.php");
+    if(isset($_POST['register']))
+    {
+        $username = $_POST['username'];
+        $city = $_POST['city'];
+        $age = $_POST['age'];
+        $email = $_POST['email'];
+        $password = md5($_POST['password']);
+        
+        $sqlcheck = "SELECT username FROM login WHERE username = '$username'";
+        $resultcheck = mysqli_query($conn, $sqlcheck); 
+        if (mysqli_num_rows($resultcheck) > 0)
+            echo ("user name already taken");
+        else
+        {
+            $sql = "INSERT INTO login(status,status1,username,city,age,password1,email,role)
+            VALUES(3,'عميل','$username','$city','$age','$password','$email',3)";
+            $result = mysqli_query($conn, $sql);
+            if ($result == TRUE) 
+            {
+                //echo "Save Ok<br/>";
+                header("location: login.php");
+            }
+            else 
+                echo "Save failed<br/>";
+        }
+    }
+    mysqli_close($conn);
+?>
  
 									</div>
 								</div>
@@ -168,33 +197,3 @@
    </form>
 </div>-->
 </body></html>
-<?php
-    include("config.php");
-    if(isset($_POST['register']))
-    {
-        $username = $_POST['username'];
-        $city = $_POST['city'];
-        $age = $_POST['age'];
-        $email = $_POST['email'];
-        $password = md5($_POST['password']);
-        
-        $sqlcheck = "SELECT username FROM login WHERE username = '$username'";
-        $resultcheck = mysqli_query($conn, $sqlcheck); 
-        if (mysqli_num_rows($resultcheck) > 0)
-            echo ("user name already taken");
-        else
-        {
-            $sql = "INSERT INTO login(username,city,age,password1,email,role)
-            VALUES('$username','$city','$age','$password','$email',3)";
-            $result = mysqli_query($conn, $sql);
-            if ($result == TRUE) 
-            {
-                //echo "Save Ok<br/>";
-                header("location: login.php");
-            }
-            else 
-                echo "Save failed<br/>";
-        }
-    }
-    mysqli_close($conn);
-?>

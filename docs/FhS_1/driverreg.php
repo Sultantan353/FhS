@@ -2,6 +2,8 @@
 
 <head>
 	<title>معلومات الحساب</title>
+	<link rel="stylesheet" type="text/css" href="scc.css"  media="all" />
+  <link rel="stylesheet" type="text/css" href="css/style.css"  media="all" />
 
 	<link
 		href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic"
@@ -23,14 +25,37 @@
 
 </head>
     <body>
+	<div class="header" style="background-color: #1e2530;">
+				<div class="wrap">
+				<!--start-logo-->
+				<div class="logo">
+					<a href="index.html" style="font-size: 30px;color:white">الفحص الدوري</a>
+				</div>
+				<!--end-logo-->
+				<!--start-top-nav-->
+				<div class="top-nav">
+					<ul>
+						<li class=""><a href="index.php" style="	padding: 20px;">الرئيسية</a></li>
+                        <li class=""><a href="reg.php" style="	padding: 20px;">إنشاء حساب جديد</a></li>
+						<li class=""><a href="login.php" style="	padding: 20px;">تسجيل الدخول</a></li>
+
+						<!--<li><a href="contact.php" style="	padding: 20px;">اسشارة طبية</a></li>-->
+					</ul>					
+				</div>
+				<div class="clear"> </div>
+				<!--end-top-nav-->
+			</div>
+			<!--end-header-->
+		</div><hr style="background-color:#3391E7;height:15px;margin:10px 0px">
+    <br><br>
     <div>
 		<div class="wrap-content container" style="width: 500px;">
 			<section id="page-title">
 				<div>
-					<h1 class="mainTitle" style="text-align: center;">إنشاء حساب جديد</h1><h2 style="text-align: right;"><a href = "driverlogin.php">BACK</a></h2>
+					<h1 class="mainTitle" style="text-align: center;">إنشاء حساب جديد</h1>
 				</div>
 			</section>
-			<div>
+			<div dir="rtl">
 				<div class="row">
 					<div>
 						<div>
@@ -112,6 +137,38 @@
       <input type = "submit" name="register" value = "Register" id="btn2"/><br />
    </form>
 </div> -->
+<hr style="background-color:#3391E7;height:15px;margin:150px 0px 10px 0px;">
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span>Copyright © 2019, All Right Reserved Seobin</span>
+                    </div>
+                    <!-- End Col -->
+                    <div class="col-md-6">
+                        <div class="copyright-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">Terms</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End col -->
+                </div>
+                <!-- End Row -->
+            </div>
+            <!-- End Copyright Container -->
+        </div>
 </body></html>
 <?php
     include("driverconfig.php");
