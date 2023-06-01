@@ -64,26 +64,52 @@
 	<link rel="stylesheet" href="assets/css/plugins.css">
 	
   <link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
-
+<style>
+	body{
+  font-size:17px;
+  color:#424242;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+}
+	</style>
 
 </head>
 
 <body>
-<div class="header" style="background-color: #1e2530;padding: 10px 0px 0px 0px;">
-				<div class="wrap">
-				<!--start-logo-->
-				<div class="logo">
-					<a href="index.html" style="font-size: 30px;color:white">الفحص الدوري</a>
-				</div>
-				<!--end-logo-->
-				<!--start-top-nav-->
-				<div class="top-nav">
-					<ul>
-						<li class=""><a href="index.php" style="	padding: 20px;">الرئيسية</a></li>
-						
-						<li><a href = "index.php" style="	padding: 20px;">رجوع للخلف</a></li>
+<div class="header" style="background-color: #1e2530;">
+          <div class="logo-container">
+ 
+      <div class="logo-holder logo-2">
+        <a href="">
+          <i class="fas fa-book-open"></i>
+          <div class="left">
+            <!--<p>Dolor sit amet...!</p>--><div class="logo">
+            <img src="images/pngwing.com (1).png" style="top:0;left:0;" width="100px" height="100px">
+
+                <a href="index.html" style="font-size: 50px;color:white;margin:30px 0px 0px 0px;">الفحص الدوري</a>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+</div>
+<div class="top-nav">
+					<ul style="margin:35px 50px 0px 0px">
+						<li class=""><a href="index.php" style="	padding: 20px;font-size:30px;">الرئيسية</a></li>
+                        <li class=""><a href="reg.php" style="	padding: 20px;font-size:30px;">إنشاء حساب مستفيد</a></li>
+                        <li class=""><a href="driverreg.php" style="	padding: 20px;font-size:30px;">إنشاء حساب مقدم خدمة</a></li>
+
+						<!--<li><a href="contact.php" style="	padding: 20px;">اسشارة طبية</a></li>-->
 					</ul>					
 				</div>
+				<div class="wrap">
+                
+				<!--start-logo-->
+				
+				<!--end-logo-->
+				<!--start-top-nav-->
+				
 				<div class="clear"> </div>
 				<!--end-top-nav-->
 			</div>
@@ -133,20 +159,9 @@
 											
 
 											<input type="submit" name="submit" value="تسجيل الدخول" class="btn btn-o btn-primary">
-											<input type="submit" name="reg" value="إنشاء حساب جديد" class="btn btn-o btn-primary">
-											<input type="submit" name="driverreg" value="إنشاء حساب جديد" class="btn btn-o btn-primary">
-											<?php if (isset($_POST['reg'])) 
-            {
-                
-                header("location: reg.php");
-            } 
-			?> 
-			<?php if (isset($_POST['driverreg'])) 
-            {
-                
-                header("location: driverreg.php");
-            } 
-			?> 
+											<button class="btn btn-o btn-primary" name="a" type="submit" formaction="reg.php">إنشاء حساب مستفيد</button>
+											<button class="btn btn-o btn-primary" name="a" type="submit" formaction="driverreg.php">إنشاء حساب مقدم خدمة</button>
+
 			<!--<a   href="reg.php">إنشاء حساب جديد</a>-->
 											
 
@@ -166,28 +181,28 @@
 	</div>
 	</div>
 	<hr style="background-color:#3391E7;height:15px;margin:150px 0px 10px 0px;">
-        <div class="copyright">
+	<div class="copyright">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <span>Copyright © 2019, All Right Reserved Seobin</span>
+                        <span style="font-size:20px;">حقوق الطبع والنشر © 2023 ، جميع الحقوق محفوظة</span>
                     </div>
                     <!-- End Col -->
                     <div class="col-md-6">
                         <div class="copyright-menu">
-                            <ul>
+                            <ul style="font-size:20px;">
                                 <li>
-                                    <a href="#">Home</a>
+                                    <a href="index.php">الرئيسية</a>
                                 </li>
                                 <li>
-                                    <a href="#">Terms</a>
+                                    <a href="reg.php">إنشاء حساب مستفيد</a>
                                 </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
+								<li>
+                                    <a href="driverreg.php">إنشاء حساب مقدم خدمة</a>
                                 </li>
-                                <li>
-                                    <a href="#">Contact</a>
-                                </li>
+								
+								
+                               
                             </ul>
                         </div>
                     </div>
@@ -197,14 +212,5 @@
             </div>
             <!-- End Copyright Container -->
         </div>
-  <!--  <div class="box">
-   <form action = "" method = "post">
-      <h1>UserName  :</h1><input type = "text" name = "username" class="email"/><br /><br />
-      <h1>Password  :</h1><input type = "password" name = "password" class="password"/><br/><br />
-      <input type = "submit" name="submit" value = " Submit " id="btn2"/><br />
-</form>
-   <a href="reg.php">New user</a>
-    <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
- </div>  -->
 </body></html>
 

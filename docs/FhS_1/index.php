@@ -45,7 +45,18 @@
     padding: 0 16px;
   }  
 }
+
+body{
+  font-size:17px;
+  color:#424242;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+}
+
+
             </style>
+            
 	</head>
 	<body>
 	
@@ -60,22 +71,39 @@
 		</div>
 					</div>-->
           <div class="header" style="background-color: #1e2530;">
-				<div class="wrap">
-				<!--start-logo-->
-				<div class="logo">
-					<a href="index.html" style="font-size: 30px;color:white">الفحص الدوري</a>
-				</div>
-				<!--end-logo-->
-				<!--start-top-nav-->
-				<div class="top-nav">
-					<ul>
-						<li class=""><a href="index.php" style="	padding: 20px;">الرئيسية</a></li>
-                        <li class=""><a href="reg.php" style="	padding: 20px;">إنشاء حساب جديد</a></li>
-						<li class=""><a href="login.php" style="	padding: 20px;">تسجيل الدخول</a></li>
+          <div class="logo-container">
+ 
+      <div class="logo-holder logo-2">
+        <a href="">
+          <i class="fas fa-book-open"></i>
+          <div class="left">
+            <!--<p>Dolor sit amet...!</p>--><div class="logo">
+            <img src="images/pngwing.com (1).png" style="top:0;left:0;" width="100px" height="100px">
+
+                <a href="index.html" style="font-size: 50px;color:white;margin:30px 0px 0px 0px;">الفحص الدوري</a>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+</div>
+<div class="top-nav">
+					<ul style="margin:35px 50px 0px 0px">
+						<li class=""><a href="index.php" style="	padding: 20px;font-size:30px;">الرئيسية</a></li>
+                        <li class=""><a href="reg.php" style="	padding: 20px;font-size:30px;">إنشاء حساب مستفيد</a></li>
+                        <li class=""><a href="driverreg.php" style="	padding: 20px;font-size:30px;">إنشاء حساب مقدم خدمة</a></li>
+						<li class=""><a href="login.php" style="	padding: 20px;font-size:30px;">تسجيل الدخول</a></li>
 
 						<!--<li><a href="contact.php" style="	padding: 20px;">اسشارة طبية</a></li>-->
 					</ul>					
 				</div>
+				<div class="wrap">
+                
+				<!--start-logo-->
+				
+				<!--end-logo-->
+				<!--start-top-nav-->
+				
 				<div class="clear"> </div>
 				<!--end-top-nav-->
 			</div>
@@ -162,7 +190,7 @@
                                                 <span class="icon">
                                                     <i class="fa"><img src="images/ad.png"></i>
                                                 </span>
-                                                <span class="title" style="color:white;">إنشاء حساب مستفيد</span>
+                                                <span class="title" style="color:white;" >إنشاء حساب مستفيد</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>    
@@ -170,44 +198,35 @@
                                     </div><br><br>
                                     <center>   <img src="images/car.png" style="width:80%;"></center>
                                     <center>                            
-<div class="card" style="text-align:right;width:80%;">
+<div class="card" dir="rtl" style="text-align:right;width:80%;">
     <div class="card-title">خلفية ومحفزات  المشروع</div>
 
-    <div class="card-title">يوفر هذا المشروع حلا لمشكلة عدم توفر خدمة لمالك السيارات من القيام بعمل فحص دوري لسياراتهم، حيث توفر هذه الخدمة استلام سيارة العميل من موقعه والذهاب بها الى مركز الفحص الدوري، و عمل الصيانة اللازمة لها لاجتياز الفحص الدوري وإرجاعها لموقع العميل، و توفير بعض القطع الإستهالكية التي تعيق المركبة من إجتياز إختبار الفحص الدوري، و إمكانية عمل فحص مبدئ للمركبة مع تقرير بنتائج الفحص المبدئ ونسبة إجتياز المركبة لإختبار الفحص الدوري</div>
+    <div class="card-title" dir="rtl">يوفر هذا المشروع حلا لمشكلة عدم توفر خدمة لمالك السيارات من القيام بعمل فحص دوري لسياراتهم، حيث توفر هذه الخدمة استلام سيارة العميل من موقعه والذهاب بها الى مركز الفحص الدوري، و عمل الصيانة اللازمة لها لاجتياز الفحص الدوري وإرجاعها لموقع العميل، و توفير بعض القطع الإستهالكية التي تعيق المركبة من إجتياز إختبار الفحص الدوري، و إمكانية عمل فحص مبدئ للمركبة مع تقرير بنتائج الفحص المبدئ ونسبة إجتياز المركبة لإختبار الفحص الدوري</div>
 
    
   </div>
-  <div class="card" style="text-align:right;width:80%;">
+  <div class="card" dir="rtl" style="text-align:right;width:80%;">
     <div class="card-title">أهداف  المشروع</div>
 
-    <div class="card-title">1 تسهيل عملية الفحص الدوري لمالك السيارات.
--2 توفرت خدمة الستالم سيارة العميل من موقعه وعمل 
-الفحص الدوري لها و إرجاعها اىل موقعه.
--3 إمكانية عمل الصيانة الالزمة لسيارة العميل الجتياز 
-اختبار الفحص الدوري.
-رت -4 تعيق
-توفرتبعض القطع اإلستهالكية ال المركبة 
-إجتياز إختبار الفحص الدوري.
- -5 توفرت خدمة الفحص
- 
-المبدئ للمركبة مع تقرير بنتائج 
- و
- 
-الفحص المبدئ نسبة إجتياز المركبة إلختبار 
-الفحص الدوري</div>
+    <div class="card-title" dir="rtl"><pre>
+1- تسهيل عملية الفحص الدوري لملاك السيارات 
+2- توفير خدمة لاستلام سيارة العميل من موقعه وعمل الفحص الدوري لها وارجاعها الى موقعه 
+3- امكانية عمل الصيانه اللازمة لسيارة العميل لاجتياز اختبار الفحص الدوري 
+4- توفير بعض القطع الاستهلاكية التي تعيق المركبة من اجتياز الفحص الدوري 
+5- توفير خدمة الفحص المبدئي للمركبة مع تقرير بنتائج الفحص المبدئي ونسبة اجتياز المركبة لاختبار الفحص الدوري
+</pre>
+    </div>
 
    
   </div>
-  <div class="card" style="text-align:right;width:80%;">
-    <div class="card-title">النتائج المتوقعة للم رشوع</div>
+  <div class="card" dir="rtl" style="text-align:right;width:80%;">
+    <div class="card-title">النتائج المتوقعة للمشروع </div>
 
-    <div class="card-title">برمجة موقع يوفر خدمة تسمح للعميل عمل الفحص 
-الدوري لسيارته وعمل الصيانة الالزمة الجتياز اختبار 
-موقعه.
- 
- 
-الفحص الدوري وهو ف
-</div>
+    <div class="card-title">
+        <pre>
+برمجة موقع يوفر خدمة تسمح للعميل عمل الفحص الدوري لسيارته وعمل الصيانة اللازمة لاجتياز اختبار الفحص الدوري.
+        </pre>
+ </div>
 
    
   </div>
@@ -241,28 +260,30 @@
 
 		
     <hr style="background-color:#3391E7;height:15px;margin:10px 0px">
-        <div class="copyright">
+    <div class="copyright">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <span>Copyright © 2019, All Right Reserved Seobin</span>
+                        <span style="font-size:20px;">حقوق الطبع والنشر © 2023 ، جميع الحقوق محفوظة</span>
                     </div>
                     <!-- End Col -->
                     <div class="col-md-6">
                         <div class="copyright-menu">
-                            <ul>
+                            <ul style="font-size:20px;">
                                 <li>
-                                    <a href="#">الرئيسية</a>
+                                    <a href="index.php">الرئيسية</a>
                                 </li>
                                 <li>
-                                    <a href="#">Terms</a>
+                                    <a href="reg.php">إنشاء حساب مستفيد</a>
                                 </li>
-                                <li>
-                                    <a href="#">Privacy Policy</a>
+								<li>
+                                    <a href="driverreg.php">إنشاء حساب مقدم خدمة</a>
                                 </li>
-                                <li>
-                                    <a href="#">Contact</a>
+								<li>
+                                    <a href="login.php">تسجيل دخول</a>
                                 </li>
+								
+                               
                             </ul>
                         </div>
                     </div>
@@ -272,13 +293,6 @@
             </div>
             <!-- End Copyright Container -->
         </div>
-        
-        <!-- End Copyright -->
-        <!-- Back to top -->
-        
-        <!-- End Back to top -->
-
-
 <!-- Credit to https://bootsnipp.com/snippets/ooa9M -->
 	</body>
 </html>

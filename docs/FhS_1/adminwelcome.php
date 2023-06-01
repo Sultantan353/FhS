@@ -65,35 +65,60 @@ h1{
 	<link rel="stylesheet" href="assets/css/styles.css">
 	<link rel="stylesheet" href="assets/css/plugins.css">
 	<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
-	
+	<style> 
+     
+ 
+
+body{
+  font-size:17px;
+  color:#424242;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+}
+
+
+            
+
+        </style>
 </head>
 
 <body>
-<div class="header" style="background-color: #1e2530;padding: 10px 0px 0px 0px;
-">
-				<div class="wrap">
-					
-				<!--start-logo-->
-				<div class="logo">
+<div class="header" style="background-color: #1e2530;">
+          <div class="logo-container">
+ 
+      <div class="logo-holder logo-2">
+        <a href="">
+          <i class="fas fa-book-open"></i>
+          <div class="left">
+            <!--<p>Dolor sit amet...!</p>--><div class="logo">
+            <img src="images/pngwing.com (1).png" style="top:0;left:0;" width="100px" height="100px">
 
-					<a href="index.html" style="font-size: 30px;color:white; font-family:'Sofia', sans-serif;" >الفحص الدوري</a>
-				
-				</div>
-				<!--end-logo-->
-				<!--start-top-nav-->
-				<div class="top-nav">
-					<ul>
-					<li class=""><a href="adminwelcome.php" style="	padding: 20px;">الرئيسية</a></li>
+                <a href="index.html" style="font-size: 50px;color:white;margin:30px 0px 0px 0px;">الفحص الدوري</a>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+</div>
+<div class="top-nav">
+					<ul style="margin:35px 50px 0px 0px">
+						<li class=""><a href="adminwelcome.php" style="	padding: 20px;font-size:30px;">الرئيسية</a></li>
+                        <li class=""><a href="customers-b.php" target="iframe_a" style="	padding: 20px;font-size:30px;">سجلات العملاء</a></li>
+                        <li class=""><a href="manage-drivers-b.php" target="iframe_a" style="	padding: 20px;font-size:30px;">سجلات مقدمين الخدمة</a></li>
+						<li class=""><a href="orders.php" target="iframe_a" style="	padding: 20px;font-size:30px;">سجلات الطلبات</a></li>
+						<li class=""><a href="logout.php" style="	padding: 20px;font-size:30px;">الخروج</a></li>
 
-					<li class=""><a href="customers-b" target="iframe_a" style="	padding: 20px;">سجلات العملاء</a></li>
-
-					<li class=""><a href="manage-drivers-b.php" target="iframe_a" style="	padding: 20px;">سجلات مقدمين الخدمة</a></li>
-
-						<li class=""><a href="orders.php" target="iframe_a" style="	padding: 20px;">جميع الطلبات</a></li>
-
-						<li><a href = "logout.php" style="	padding: 20px;">تسجيل خروج</a></li>
+						<!--<li><a href="contact.php" style="	padding: 20px;">اسشارة طبية</a></li>-->
 					</ul>					
 				</div>
+				<div class="wrap">
+                
+				<!--start-logo-->
+				
+				<!--end-logo-->
+				<!--start-top-nav-->
+				
 				<div class="clear"> </div>
 				<!--end-top-nav-->
 			</div>
@@ -181,12 +206,12 @@ h1{
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <span>حقوق الطبع والنشر © 2023 ، جميع الحقوق محفوظة</span>
+                        <span style="font-size:20px;">حقوق الطبع والنشر © 2023،جميع الحقوق محفوظة</span>
                     </div>
                     <!-- End Col -->
                     <div class="col-md-6">
                         <div class="copyright-menu">
-                            <ul>
+                          <ul style="font-size:18px;">
                                 <li>
                                     <a href="adminwelcome.php">الرئيسية</a>
                                 </li>

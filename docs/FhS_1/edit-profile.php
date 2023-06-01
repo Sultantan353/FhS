@@ -33,7 +33,22 @@
 	<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
 
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<style> 
+     
+ 
 
+	 body{
+	   font-size:17px;
+	   color:#424242;
+	   font-family: 'Open Sans', sans-serif;
+	   background-color: #ffffff;
+	   background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
+	 }
+	 
+	 
+				 
+	 
+			 </style>
 </head>
 
 <body>

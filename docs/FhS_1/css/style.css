@@ -26,13 +26,13 @@ body{
 	background:#F8FBFB;
 }
 .wrap{
-	width:70%;
+	width:90%;
 	margin:0 auto;
 }
 
 .logo{
 	float:left;
-	margin-top: 14px;
+	margin: 14px;
 }
 .top-nav{
 	float:right;

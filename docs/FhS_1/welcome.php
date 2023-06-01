@@ -5,27 +5,19 @@
 <html>
 <head>
       <style> 
-      body{
+     
+ 
+
+body{
+  font-size:17px;
+  color:#424242;
   font-family: 'Open Sans', sans-serif;
-  background:#ecf0f1;
-  margin: 0 auto 0 auto;  
-  width:100%; 
-  text-align:center;
-  margin: 20px 0px 20px 0px;   
-}
-h1{
-  font-size:1.5em;
-  color:#525252;
-}
-.box{
-  background:white;
-  width:300px;
-  border-radius:6px;
-  margin: 0 auto 0 auto;
-  padding:0px 0px 70px 0px;
-  border: #2980b9 4px solid; 
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/clean-gray-paper.png");
 }
 
+
+            
 
         </style>
     </head>
@@ -68,32 +60,42 @@ h1{
 	
 </head>
 
-<body>
-<div class="header" style="background-color: #1e2530;padding: 10px 0px 0px 0px;
-">
-				<div class="wrap">
-					
-				<!--start-logo-->
-				<div class="logo">
+<body style="background-image: url('https://www.transparenttextures.com/patterns/clean-gray-paper.png');">
+<div class="header" style="background-color: #1e2530;">
+          <div class="logo-container">
+ 
+      <div class="logo-holder logo-2">
+        <a href="">
+          <i class="fas fa-book-open"></i>
+          <div class="left">
+            <!--<p>Dolor sit amet...!</p>--><div class="logo">
+            <img src="images/pngwing.com (1).png" style="top:0;left:0;" width="100px" height="100px">
 
-					<a href="index.html" style="font-size: 30px;color:white; font-family:'Sofia', sans-serif;" >الفحص الدوري</a>
-				
-				</div>
-				<!--end-logo-->
-				<!--start-top-nav-->
-				<div class="top-nav">
-					<ul>
-					<li class=""><a href="welcome.php" style="	padding: 20px;">الرئيسية</a></li>
+                <a href="index.html" style="font-size: 50px;color:white;margin:30px 0px 0px 0px;">الفحص الدوري</a>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+</div>
+<div class="top-nav">
+					<ul style="margin:35px 50px 0px 0px">
+						<li class=""><a href="welcome.php"  style="	padding: 20px;font-size:30px;">الرئيسية</a></li>
+                        <li class=""><a href="edit-profile.php?st=0" target="iframe_a" style="	padding: 20px;font-size:30px;">معلومات الحساب</a></li>
+                        <li class=""><a href="appointment-history.php?st=0" target="iframe_a" style="	padding: 20px;font-size:30px;">طلباتي</a></li>
+						<li class=""><a href="book-appointment.php" target="iframe_a" style="	padding: 20px;font-size:30px;">طلب جديد</a></li>
+						<li class=""><a href="logout.php"  style="	padding: 20px;font-size:30px;">تسجيل خروج</a></li>
 
-					<li class=""><a href="edit-profile.php?st=0" target="iframe_a" style="	padding: 20px;">معلومات الحساب</a></li>
-
-					<li class=""><a href="appointment-history.php?st=0" target="iframe_a" style="	padding: 20px;">طلباتي</a></li>
-
-						<li class=""><a href="book-appointment.php" target="iframe_a" style="	padding: 20px;">طلب جديد</a></li>
-
-						<li><a href = "logout.php" style="	padding: 20px;">تسجيل خروج</a></li>
+						<!--<li><a href="contact.php" style="	padding: 20px;">اسشارة طبية</a></li>-->
 					</ul>					
 				</div>
+				<div class="wrap">
+                
+				<!--start-logo-->
+				
+				<!--end-logo-->
+				<!--start-top-nav-->
+				
 				<div class="clear"> </div>
 				<!--end-top-nav-->
 			</div>
@@ -104,7 +106,7 @@ h1{
 
 	
 	<div style="width: 100%;display: flex;background-color:;margin:0px 0px 0px 0px;">
-	<div style="width: 80%; display: flex;float:left;background-color:;">
+	<div style="width: 80%; display: flex;float:left;background-color:#ffffff;  background-image: url('https://www.transparenttextures.com/patterns/clean-gray-paper.png');">
 	<iframe name="iframe_a" class="embed-responsive-item" style="width: 100%;display: flex;" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <div style="text-align: right;
@@ -177,16 +179,16 @@ h1{
 
 	
 	<hr style="background-color:#3391E7;height:15px;margin:0px 0px 10px 0px;">
-        <div class="copyright">
+	<div class="copyright">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <span>حقوق الطبع والنشر © 2023 ، جميع الحقوق محفوظة</span>
+                        <span style="font-size:20px;">حقوق الطبع والنشر © 2023 ، جميع الحقوق محفوظة</span>
                     </div>
                     <!-- End Col -->
                     <div class="col-md-6">
                         <div class="copyright-menu">
-                            <ul>
+                            <ul style="font-size:20px;">
                                 <li>
                                     <a href="welcome.php">الرئيسية</a>
                                 </li>
